@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    box-shadow: inset 0 -1 0 #c5c5c6;
+    padding: 2%;
+    z-index: 1;
+}
+
+.button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    position: relative;
+    
+}
+
+.button span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: aliceblue;
+    position: absolute;
+}
+
+.button span:nth-child(1) {
+    transform: translateY(7px);
+}
+
+.button span:nth-child(3) {
+    transform: translateY(-7px);
+}
+
+.button.open span:nth-child(1) {
+    transform: translate(0) rotate(45deg)
+}
+
+.button.open span:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0s ease-out;
+
+}
+
+.button.open span:nth-child(3) {
+    transform: translate(0) rotate(-45deg)
+}
+
+.btn {
+    background-color: black;
+}
+
+.btn:hover {
+    background-color: red;
+    color: black;
+}
+
+.navlinks-container a {
+    margin: 10px 0px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.navlinks-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform-origin: left;
+    background: #333;
+    transition: transform 0.3 ease-out;
+    transform: scaleX(0);
+    
+}
+
+.navlinks-container a:hover::after {
+    transform: scaleX(1);
+    
+}
+
+.navlinks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: #fafafa;
+    top: 100%;
+    left: 0;
+    height: 80vh;
+    border-right: 1px solid #c5c5c6;
+    transform: translate(-100%);
+    padding: 15px 50px 15px 20px;
+   
+}
+
+.open {
+    transform: translate(0%);
+    
+}
+
+.button.open span:nth-child(1),
+.button span:nth-child(3) {
+    transition: transform 0.3s 0.15s ease-out;
+}
+
+
+.nav .image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    text-transform: none;
+    margin: auto;
+    width: 5%;
+    height: 100%;
+}
+
+.reservation {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+.reservation:hover {
+    color: red;
+}
+
+.image2 {
+    height: 100%;
+    width: 100%;
+}
+
+.h1 {
+    /* position: absolute;
+    top: 50%;
+    left: 40%; */
+    color: red;
+    font-size: 4em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px;
+}
+
+.h2 {
+    /* position: absolute;
+    top: 90%;
+    right: 5%; */
+
+    color: red;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px;
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    margin-top: 15%;
+    background-color: goldenrod;
+    color: red;
+    border: none
+}
+
+.galerie {
+
+    background-color: goldenrod;
+    color: red;
+    border: none;
+}
+
+.p1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 2%;
+
+}
+
+.img2 {
+    width: 102%;
+    height: 100%;
+}
+
+.p2 {
+    text-align: center;
+    font-size: 3em;
+    padding: 2%;
+}
+
+.biographie {
+margin-top: 10%;
+    background-color: goldenrod;
+    color: green;
+    border: none;
+}
+
+.img3 {
+    width: 100%;
+    height: 99%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.plan img {
+    height: 15rem;
+    margin-left: 22%;
+
+}
+
+.adresse {
+    text-align: center;
+    padding: 3%;
+}
+
+.mail {
+    padding: 3%;
+    text-align: center;
+}
+
+.ensavoirplus {
+    margin-top:15% ;
+    color: red;
+    border: none;
+    background-color: goldenrod;
+}
+
+.evenement {
+    padding: 10%;
+}
+
+footer {
+    background-color: gray;
+}
+
+.avis img {
+    width: 20%;
+}
+
+.section1 {
+    font-size: 1.5rem;
+}
+
+.e_mail {
+    background-color: goldenrod;
+    color: aliceblue;
+}
+
+.mention_legales {
+    text-decoration: none;
+    color: #333;
+}
+
+.ml {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #ebe4e4;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.ml h1{
+    color: red;
+}
+.ml h2{
+    color: goldenrod;
+}
+/* .carousel-item1{
+    width: 100%;
+    height:50% ;
+} */
+
+.item{
+    width: 100%;
+    height: 45vw;
+}
+
+
+
+/* .carrousel{  */
+    /* margin-top: 0.5%;
+     padding: 0.5% 1% 0% 1%; */
+   
+/* } */
+
+
+/* .container_main {
+  width: 100%;
+    /* margin: 0 auto; */
+    /* padding: 50px; */
+   
+  /* }
+  
+  .slider img {
+    max-width: 100%;
+    display: none;
+    
+  }
+  img.active {
+    display: block;
+    animation: fade 0.8s;
+    
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .cont-btn {
+    width: 100%;
+    height: auto;
+    /* border: 1px solid #000; 
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+  }
+  .btn-nav {
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+  } */
+
+ 
+ 
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666666;
+  }
+  input[type="text"], input[type="date"], select, input[type="number"], textarea,input[type="email"], input[type="tel"]{
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #cccccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #555555;
+  }
+  
+
+
+@media (max-width:700px) {
+    .nav .image {
+        position: absolute;
+        max-height: 34px;
+        max-width: 30px;
+    }
+
+    .image2 {
+
+        min-width: 100%;
+        min-height: 700px;
+        background-repeat: no-repeat;
+    }
+
+    .navlinks-container {
+        height: 70vh;
+        width: 22vh;
+    }
+}
