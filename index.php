@@ -38,6 +38,10 @@ if(isset($_GET["Acceuil"])){
     // include_once("controllers/mentions_legalesCTRL.php");
     include_once("views/mentions_legales.php");
     include_once("views/footer.php");
+}else if(isset($_GET["menu"])){
+    include_once("views/navbar.php");
+    include_once("views/menu.php");
+    include_once("views/footer.php");
 }
 ?>
 </body>

@@ -24,7 +24,7 @@
     background-color: black;
     align-items: center;
     position: relative;
-    
+
 }
 
 .button span {
@@ -74,7 +74,7 @@
     color: #414141;
     display: inline-block;
     position: relative;
-    
+
 }
 
 .navlinks-container a::after {
@@ -88,12 +88,12 @@
     background: #333;
     transition: transform 0.3 ease-out;
     transform: scaleX(0);
-    
+
 }
 
 .navlinks-container a:hover::after {
     transform: scaleX(1);
-    
+
 }
 
 .navlinks-container {
@@ -108,12 +108,12 @@
     border-right: 1px solid #c5c5c6;
     transform: translate(-100%);
     padding: 15px 50px 15px 20px;
-   
+
 }
 
 .open {
     transform: translate(0%);
-    
+
 }
 
 .button.open span:nth-child(1),
@@ -209,7 +209,7 @@
 }
 
 .biographie {
-margin-top: 10%;
+    margin-top: 10%;
     background-color: goldenrod;
     color: green;
     border: none;
@@ -241,7 +241,7 @@ h3 {
 }
 
 .ensavoirplus {
-    margin-top:15% ;
+    margin-top: 15%;
     color: red;
     border: none;
     background-color: goldenrod;
@@ -283,18 +283,21 @@ footer {
     background: #ebe4e4;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-.ml h1{
+
+.ml h1 {
     color: red;
 }
-.ml h2{
+
+.ml h2 {
     color: goldenrod;
 }
+
 /* .carousel-item1{
     width: 100%;
     height:50% ;
 } */
 
-.item{
+.item {
     width: 100%;
     height: 45vw;
 }
@@ -302,18 +305,18 @@ footer {
 
 
 /* .carrousel{  */
-    /* margin-top: 0.5%;
+/* margin-top: 0.5%;
      padding: 0.5% 1% 0% 1%; */
-   
+
 /* } */
 
 
 /* .container_main {
   width: 100%;
     /* margin: 0 auto; */
-    /* padding: 50px; */
-   
-  /* }
+/* padding: 50px; */
+
+/* }
   
   .slider img {
     max-width: 100%;
@@ -348,44 +351,122 @@ footer {
     cursor: pointer;
   } */
 
- 
- 
-  form {
+
+
+form {
     max-width: 500px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  }
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 10px;
     color: #666666;
-  }
-  input[type="text"], input[type="date"], select, input[type="number"], textarea,input[type="email"], input[type="tel"]{
+}
+
+input[type="text"],
+input[type="date"],
+select,
+input[type="number"],
+textarea,
+input[type="email"],
+input[type="tel"] {
     width: 100%;
     padding: 10px;
     border-radius: 3px;
     border: 1px solid #cccccc;
     margin-bottom: 20px;
     box-sizing: border-box;
-  }
-  input[type="submit"] {
+}
+
+input[type="submit"] {
     background-color: #333333;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 3px;
     border: none;
     cursor: pointer;
-  }
-  input[type="submit"]:hover {
+}
+
+input[type="submit"]:hover {
     background-color: #555555;
-  }
-  
+}
+
+/* CSS POUR LA PAGE DE MENU */
+
+/* Ajouter un espace supplémentaire en haut de la page */
+.menu-h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 50px;
+    color: red;
+}
+
+/* Ajouter un espace supplémentaire entre les sections */
+.menu-h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+    text-align: center;
+    color: green;
+}
+
+/* Style des articles du menu */
+.menu-item {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 30em;
+}
 
 
-@media (max-width:700px) {
+
+
+
+/* Ajouter un espace supplémentaire entre l'image et le texte */
+.menu-item img {
+    width: 20em;
+    height: 15em;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+}
+
+/* Style pour le titre de l'article */
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Style pour la description de l'article */
+.menu-item p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Style pour le prix de l'article */
+.menu-item .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b30000;
+    text-align: center;
+}
+
+
+
+/* @media (max-width:700px) {
     .nav .image {
         position: absolute;
         max-height: 34px;
@@ -403,4 +484,4 @@ footer {
         height: 70vh;
         width: 22vh;
     }
-}
+} */
