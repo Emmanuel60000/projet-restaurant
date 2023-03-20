@@ -51,12 +51,8 @@ CREATE TABLE CLIENTS(
         prenom_clients    Varchar (20) NOT NULL ,
         mail_clients      Varchar (20) NOT NULL ,
         telephone_clients Int NOT NULL ,
-        DDN_clients       Date NOT NULL ,
         adresse_clients   Varchar (30) NOT NULL ,
-        ville_clients     Varchar (30) NOT NULL ,
-        CP_clients        Int NOT NULL ,
-        habitudes_clients Varchar (20) NOT NULL ,
-        allergies_clients Varchar (20) NOT NULL
+
 	,CONSTRAINT CLIENTS_PK PRIMARY KEY (code_clients)
 )ENGINE=InnoDB;
 
