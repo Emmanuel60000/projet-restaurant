@@ -8,9 +8,9 @@
       </button>
     </div>
     <div class="navlinks-container">
-      <a href="">Accueil</a>
-      <a href="">Menu</a>
-      <a href="">Biographie</a>
+      <a href="index.php?Acceuil" target="_blank">Accueil</a>
+      <a href="index.php?menu" target="_blank">Menu</a>
+      <a href="index.php?biographie" target="_blank">Biographie</a>
       <a href="">Evénements</a>
       <a href="">Galerie</a>
       <a href="">Newsletter</a>
@@ -26,12 +26,11 @@
 
   </nav>
 </header>
-<section class="carrousel">
-  <!-- <div class="main">
-            <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale"> -->
-  <!-- <div class="container_main">
 
-        <div class="slider">
+   
+   <!-- <div class="container_main">  -->
+
+        <!-- <div class="slider">
             <img class="active img_main" src="https://images.unsplash.com/photo-1559467713-f830ec30e3e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
             <img class="img_main" src="https://images.unsplash.com/photo-1590634875887-a6a516622e2a?ixlib=rb-1.2.1&ixclass=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80">
             <img class="img_main" src="https://images.unsplash.com/photo-1590664216212-62e763768cae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
@@ -42,7 +41,7 @@
                 <div class="btn-nav right">→</div>
             </div>
         </div>
-    </div> -->
+    </div>  -->
   
 <!-- <h1 class="h1">Le Barrio Alto</h1>
     <h2 class="h2">Réstaurant Portugais</h2> -->

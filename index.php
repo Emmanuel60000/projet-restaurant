@@ -42,6 +42,10 @@ if(isset($_GET["Acceuil"])){
     include_once("views/navbar.php");
     include_once("views/menu.php");
     include_once("views/footer.php");
+}else if(isset($_GET["biographie"])){
+    include_once("views/navbar.php");
+    include_once("views/biographie.php");
+    include_once("views/footer.php");
 }
 ?>
 </body>

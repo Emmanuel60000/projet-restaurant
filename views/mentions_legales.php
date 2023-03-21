@@ -44,7 +44,7 @@
 <main>
     <section>
         <div class="main">
-            <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale">
+            <!-- <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale"> -->
             <h1 class="h1">Mentions légales</h1>
             <h2 class="h2">Conditions générales de vente</h2>
         </div>

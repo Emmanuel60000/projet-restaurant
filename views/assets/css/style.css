@@ -1,9 +1,12 @@
+/* Réinitialise les marges et les paddings pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* STYLE POUR LA PAGE D'ACCEUIL */
 
+/* Style pour la barre de navigation */
 .nav {
     position: sticky;
     width: 100%;
@@ -14,7 +17,7 @@
     padding: 2%;
     z-index: 1;
 }
-
+/* Style pour le bouton de menu */
 .button {
     width: 20px;
     height: 20px;
@@ -26,7 +29,7 @@
     position: relative;
 
 }
-
+/* Style pour les barres horizontales du bouton de menu */
 .button span {
     display: block;
     width: 100%;
@@ -34,38 +37,40 @@
     background: aliceblue;
     position: absolute;
 }
-
+/* Style pour la première barre horizontale du bouton de menu */
 .button span:nth-child(1) {
     transform: translateY(7px);
 }
 
+/* Style pour la troisième barre horizontale du bouton de menu */
 .button span:nth-child(3) {
     transform: translateY(-7px);
 }
-
+/* Style pour les barres horizontales du bouton de menu lorsque le menu est ouvert */
 .button.open span:nth-child(1) {
     transform: translate(0) rotate(45deg)
 }
-
+/* Style pour la deuxième barre horizontale du bouton de menu lorsque le menu est ouvert */
 .button.open span:nth-child(2) {
     opacity: 0;
     transition: opacity 0s ease-out;
 
 }
-
+/* Style pour la troisième barre horizontale du bouton de menu lorsque le menu est ouvert */
 .button.open span:nth-child(3) {
     transform: translate(0) rotate(-45deg)
 }
-
+/* Style pour les boutons de la barre de navigation */
 .btn {
     background-color: black;
 }
-
+/* Style pour les boutons de la barre de navigation lorsqu'ils sont survolés */
 .btn:hover {
     background-color: red;
     color: black;
 }
 
+/* Style pour les liens de la barre de navigation */
 .navlinks-container a {
     margin: 10px 0px;
     font-size: 18px;
@@ -74,9 +79,9 @@
     color: #414141;
     display: inline-block;
     position: relative;
-
+z-index: 2;
 }
-
+/* Style pour la ligne sous les liens de la barre de navigation */
 .navlinks-container a::after {
     content: "";
     display: block;
@@ -88,14 +93,15 @@
     background: #333;
     transition: transform 0.3 ease-out;
     transform: scaleX(0);
+    z-index: 2;
 
 }
-
+/* Style pour la ligne sous les liens de la barre de navigation lorsqu'ils sont survolés */
 .navlinks-container a:hover::after {
     transform: scaleX(1);
 
 }
-
+/* Style pour le conteneur des liens de la barre de navigation */
 .navlinks-container {
     display: flex;
     flex-direction: column;
@@ -110,7 +116,7 @@
     padding: 15px 50px 15px 20px;
 
 }
-
+/* style lorsque la sidebar est open */
 .open {
     transform: translate(0%);
 
@@ -121,7 +127,7 @@
     transition: transform 0.3s 0.15s ease-out;
 }
 
-
+/* style pour le logo */
 .nav .image {
     position: absolute;
     top: 0;
@@ -131,7 +137,7 @@
     width: 5%;
     height: 100%;
 }
-
+/* style pour le lien reservation */
 .reservation {
     color: white;
     text-decoration: none;
@@ -140,134 +146,129 @@
     top: 30%;
     text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
 }
-
+/* style lorsque la souris passe sur le lien reservation */
 .reservation:hover {
     color: red;
 }
-
+/* style por l'image 2 */
 .image2 {
-    height: 100%;
+    height: 40em;
     width: 100%;
 }
+/* style pour le titre h1 le barrio alto */
 
 .h1 {
-    /* position: absolute;
-    top: 50%;
-    left: 40%; */
-    color: red;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centre le titre par rapport à son parent */
+    color: white; 
+    text-align: center; 
+    width: 100%; 
     font-size: 4em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px;
-}
+    text-shadow: 4px 4px;
+  }
 
-.h2 {
-    /* position: absolute;
-    top: 90%;
-    right: 5%; */
 
-    color: red;
-    font-size: 2em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px;
-}
-
+/* style por l'image 1 */
 .img1 {
     width: 100%;
     height: 100%;
 }
-
+/* style pour le lien des menus */
 .menu {
     margin-top: 15%;
     background-color: goldenrod;
     color: red;
     border: none
 }
-
+/* style pour le lien des galerie photos */
 .galerie {
 
     background-color: goldenrod;
     color: red;
     border: none;
 }
-
+/* style pour le paragraphe numero 1 */
 .p1 {
     text-align: center;
     font-size: 2.5em;
     padding: 2%;
 
 }
-
+/* style pour l'image numero 2 */
 .img2 {
     width: 102%;
     height: 100%;
 }
-
+/* style pour le paragraphe numero 2 */
 .p2 {
     text-align: center;
     font-size: 3em;
     padding: 2%;
 }
-
+/* style pour le lien de la biographie */
 .biographie {
     margin-top: 10%;
     background-color: goldenrod;
     color: green;
     border: none;
 }
-
+/* syle pour l'image numero 3 */
 .img3 {
     width: 100%;
     height: 99%;
 }
-
+/* style pour les titres h3 */
 h3 {
     text-align: center;
 }
-
+/* style pour l'image de localisation */
 .plan img {
     height: 15rem;
     margin-left: 22%;
 
 }
-
+/* style pour l'adresse dans le footer */
 .adresse {
     text-align: center;
     padding: 3%;
 }
-
+/* style pour l'email dans le footer */
 .mail {
     padding: 3%;
     text-align: center;
 }
-
+/* style pour le lien en savoir plus  */
 .ensavoirplus {
     margin-top: 15%;
     color: red;
     border: none;
     background-color: goldenrod;
 }
-
+/* style pour le lien evenement  */
 .evenement {
     padding: 10%;
 }
-
+/* style pour le footer */
 footer {
     background-color: gray;
 }
-
+/* style pour les avis dans le footer */
 .avis img {
     width: 20%;
 }
-
+/* style pour la section numero 1 */
 .section1 {
     font-size: 1.5rem;
 }
-
+/* style pour l'email dans le footer */
 .e_mail {
     background-color: goldenrod;
     color: aliceblue;
 }
-
+/* style pour le lien des mentions legale */
 .mention_legales {
     text-decoration: none;
     color: #333;
@@ -292,67 +293,21 @@ footer {
     color: goldenrod;
 }
 
-/* .carousel-item1{
-    width: 100%;
-    height:50% ;
-} */
 
+/* stlyle pour les image du carrousel */
 .item {
+    margin-top: 1%;
     width: 100%;
     height: 45vw;
 }
 
 
 
-/* .carrousel{  */
-/* margin-top: 0.5%;
-     padding: 0.5% 1% 0% 1%; */
-
-/* } */
 
 
-/* .container_main {
-  width: 100%;
-    /* margin: 0 auto; */
-/* padding: 50px; */
+/* STYLE POUR LA PAGE DE RESERVATION */
 
-/* }
-  
-  .slider img {
-    max-width: 100%;
-    display: none;
-    
-  }
-  img.active {
-    display: block;
-    animation: fade 0.8s;
-    
-  }
-  @keyframes fade {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .cont-btn {
-    width: 100%;
-    height: auto;
-    /* border: 1px solid #000; 
-    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-    display: flex;
-    justify-content: center;
-  }
-  .btn-nav {
-    font-size: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-  } */
-
-
-
+/* style du formulaire */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -361,13 +316,13 @@ form {
     border-radius: 5px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
-
+/* style pour les labels du formulaire */
 label {
     display: block;
     margin-bottom: 10px;
     color: #666666;
 }
-
+/* style pour les input du formulaire */
 input[type="text"],
 input[type="date"],
 select,
@@ -382,7 +337,7 @@ input[type="tel"] {
     margin-bottom: 20px;
     box-sizing: border-box;
 }
-
+/* style pour le bouton reserver du formulaire */
 input[type="submit"] {
     background-color: #333333;
     color: #ffffff;
@@ -391,10 +346,13 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
 }
-
+/* style lorsque la souris passe sur le bouton reserver du formulaire */
 input[type="submit"]:hover {
     background-color: #555555;
 }
+
+
+
 
 /* CSS POUR LA PAGE DE MENU */
 
@@ -433,7 +391,7 @@ input[type="submit"]:hover {
 
 
 
-/* Ajouter un espace supplémentaire entre l'image et le texte */
+/* taille des images marge plus border */
 .menu-item img {
     width: 20em;
     height: 15em;
@@ -462,6 +420,39 @@ input[type="submit"]:hover {
     font-weight: bold;
     color: #b30000;
     text-align: center;
+}
+
+
+
+
+/* CSS DE LA PAGE BIOGRAPHIE */
+
+/* style du container contenant la biographie */
+.container_biographie {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+/* style du titre de la biographie */
+.h1_biographie {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+/* style des paragaphes de la biographie */
+.p_biographie {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+/* style de l'image de la biographie */
+.img_biographie {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 
