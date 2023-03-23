@@ -186,6 +186,7 @@
     font-size: 4em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 4px 4px;
+    color: #b30000;
 }
 
 
@@ -545,9 +546,15 @@ input[type="submit"]:hover {
     height: 35em;
     margin-bottom: 2em;
 }
+.h1_gallerie{
+    color: green;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
 
 /* CSS POUR LA PAGE EVENEMENTS */
-
+/* css qui definit la bite qui contient le slider */
 .container {
     width: 100vw;
     height: 80vh;
@@ -555,7 +562,7 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
 }
-
+/* css quidéfinit la zone du slider */
 .slider {
     height: 400px;
     width: 100vw;
@@ -564,7 +571,7 @@ input[type="submit"]:hover {
     position: relative;
     align-items: center;
 }
-
+/* css des images */
 .box1 {
     background: url('https://images.pexels.com/photos/2544826/pexels-photo-2544826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
@@ -723,6 +730,66 @@ input[type="submit"]:hover {
     text-align: center;
     margin-top: 1em;
 }
+
+
+/* CSS POUR PAGE DE MENU_PRESENTATION */
+
+
+/* css du container du menu presentation */
+.container_menu_presentation {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+/* css des images du menu presentation */
+.image-wrapper {
+	flex: 1;
+	position: relative;
+}
+
+.image_presentation {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: height 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .image-overlay {
+	height:100%;
+}
+/* css du texte sur les images */
+.overlay-text {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	color: red;
+	font-size: 4rem;
+	text-align: center;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+/* opacité des images */
+.image-wrapper:hover .overlay-text {
+	opacity: 1;
+}
+
+
+
+
+
 
 
 /* @media (max-width:700px) {

@@ -43,10 +43,10 @@
 </header> -->
 <main>
     <div class="main">
-        <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale">
+        <img class="image2" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="photo barrio alto">
         <h1 class="h1">Le BARRIO ALTO</h1>
 
-    </div>
+    <!-- </div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -56,27 +56,27 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="item" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" class=alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block"> -->
                     <!-- <h5>First slide label</h5> -->
                     <!-- <h1 class="h1">Le Barrio Alto</h1> -->
                     <!-- <p>Some representative placeholder content for the first slide.</p> -->
                     <!-- <h2 class="h2">Réstaurant Portugais</h2> -->
-                </div>
+                <!-- </div>
             </div>
             <div class="carousel-item">
                 <img class="item" src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" class=alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block"> -->
                     <!-- <h5>Second slide label</h5> -->
 
                     <!-- <p>Some representative placeholder content for the second slide.</p> -->
-                </div>
+                <!-- </div>
             </div>
             <div class="carousel-item">
                 <img class="item" src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" class=alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <!-- <h5>Third slide label</h5>
+                     <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p> -->
-                </div>
+                <!-- </div>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -87,7 +87,7 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div>
+    </div>  -->
 
     </section>
     <section>

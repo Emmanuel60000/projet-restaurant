@@ -1,4 +1,7 @@
 <body>
+
+<h1 class="h1_gallerie" >Galerie de Photos </h1>
+
     <div class="gallery">
         <div class="thumbnails">
           <img src="views/assets/img/equipe.jpg" data-full="views/assets/img/equipe.jpg" alt="Photo 1">
