@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* STYLE POUR LA PAGE D'ACCEUIL */
+                                    /* STYLE POUR LA PAGE D'ACCEUIL */
 
 /* Style pour la barre de navigation */
 .nav {
@@ -88,7 +88,7 @@
     color: #414141;
     display: inline-block;
     position: relative;
-    z-index: 2;
+   
 }
 
 /* Style pour la ligne sous les liens de la barre de navigation */
@@ -103,7 +103,7 @@
     background: #333;
     transition: transform 0.3 ease-out;
     transform: scaleX(0);
-    z-index: 2;
+    
 
 }
 
@@ -122,7 +122,7 @@
     background: #fafafa;
     top: 100%;
     left: 0;
-    height: 80vh;
+    height: 60vh;
     border-right: 1px solid #c5c5c6;
     transform: translate(-100%);
     padding: 15px 50px 15px 20px;
@@ -252,23 +252,26 @@ h3 {
     text-align: center;
 }
 
-/* style pour l'image de localisation */
-.plan img {
-    height: 15rem;
-    margin-left: 22%;
 
-}
+
 
 /* style pour l'adresse dans le footer */
 .adresse {
     text-align: center;
-    padding: 3%;
+    padding: 2%;
+    margin-top: 0.2em;
+}
+.heure{
+    text-align: center;
+    padding: 2%; 
+    margin-top: 1em;
 }
 
 /* style pour l'email dans le footer */
 .mail {
-    padding: 3%;
+    padding: 2%;
     text-align: center;
+    margin-top: 2em;
 }
 
 /* style pour le lien en savoir plus  */
@@ -342,7 +345,7 @@ footer {
 
 
 
-/* STYLE POUR LA PAGE DE RESERVATION */
+                                /* STYLE POUR LA PAGE DE RESERVATION */
 
 /* style du formulaire */
 form {
@@ -395,7 +398,7 @@ input[type="submit"]:hover {
 
 
 
-/* CSS POUR LA PAGE DE MENU */
+                                        /* CSS POUR LA PAGE DE MENU */
 
 /* Ajouter un espace supplémentaire en haut de la page */
 .menu-h1 {
@@ -466,7 +469,7 @@ input[type="submit"]:hover {
 
 
 
-/* CSS DE LA PAGE BIOGRAPHIE */
+                                            /* CSS DE LA PAGE BIOGRAPHIE */
 
 /* style du container contenant la biographie */
 .container_biographie {
@@ -502,7 +505,7 @@ input[type="submit"]:hover {
 
 
 
-/* CSS POUR LA GALERIE D'IMAGE */
+                                    /* CSS POUR LA GALERIE D'IMAGE */
 
 
 /* élément qui contient l'ensemble de la galerie */
@@ -553,11 +556,12 @@ input[type="submit"]:hover {
     margin-top: 1em;
 }
 
-/* CSS POUR LA PAGE EVENEMENTS */
+                                            /* CSS POUR LA PAGE EVENEMENTS */
+
 /* css qui definit la bite qui contient le slider */
 .container {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -615,7 +619,6 @@ input[type="submit"]:hover {
 }
 
 .slider [class*="box"] {
-    /*   float: left; */
     overflow: hidden;
     border-radius: 20px;
     transition: all 1s cubic-bezier(0.68, -0.6, 0.32, 1.6);
@@ -732,7 +735,7 @@ input[type="submit"]:hover {
 }
 
 
-/* CSS POUR PAGE DE MENU_PRESENTATION */
+                                      /* CSS POUR PAGE DE MENU_PRESENTATION */
 
 
 /* css du container du menu presentation */

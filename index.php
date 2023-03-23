@@ -82,16 +82,18 @@ if (isset($_GET["Acceuil"])) {
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4"><br>
-                <h3>Localisation</h3><br>
-                <div class="plan"> <img src="views/assets/img/plan-beauvais-24371.jpg" alt=""></div>
+                <h3 class="adresse">Localisation</h3><br>
+                <p class="adresse">7 rue Jean Racine</p>
+                <p class="adresse">Beauvais</p>
+                <p class="adresse" id="contact">téléphone <br> 03 44 47 54 89</p>
 
             </div>
-            <div class="col-md-4">
-                <p class="adresse">7 rue Jean Racine</p>
-                <p class="adresse">Heure d'ouverture</p>
-                <p class="adresse" id="horaire">Ouvert du mardi au dimanche de 12 heure a 14 heure 30<br> puis de 18 heure a 23
+            <div class="col-md-4 ">
+
+                <h3 class="heure">Heure d'ouverture</h3><br>
+                <p class="heure" id="horaire">Ouvert du mardi au dimanche de 12 heure a 14 heure 30<br><br> puis de 18 heure a 23
                     heure</p>
-                <p class="adresse" id="contact">téléphone <br><br> 03 44 47 54 89</p>
+                
 
             </div>
             <div class="col-md-4">
