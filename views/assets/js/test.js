@@ -34,6 +34,20 @@ function rotate() {
   $('.slider').prepend(lastChild)
   $(lastChild).addClass('firstSlide')
 }
+// La première ligne de la fonction sélectionne le dernier enfant de l'élément parent ".slider" en utilisant la méthode jQuery "$". La méthode ".clone()" est ensuite appelée pour créer une copie de cet élément.
+
+// La deuxième ligne, actuellement en commentaire, insère le contenu de la variable "lastChild" dans un élément HTML avec l'id "test".
+
+// La troisième ligne supprime la classe "firstSlide" de tous les éléments enfants de l'élément parent ".slider".
+
+// La quatrième ligne supprime l'enfant en dernier dans l'élément parent ".slider".
+
+// La cinquième ligne insère l'élément "lastChild" en tant que premier enfant de l'élément parent ".slider".
+
+// La dernière ligne ajoute la classe "firstSlide" à l'élément "lastChild".
+
+// En résumé, cette fonction permet de faire une rotation infinie de la liste d'éléments HTML contenue dans l'élément parent ".slider", où le dernier élément devient le premier élément de la liste après la rotation. La classe "firstSlide" est ajoutée à l'élément en première position dans la liste après chaque rotation.
+
 
 window.setInterval(function(){
   rotate()
