@@ -11,10 +11,10 @@
 
 
 
-<h1>
+<h1 class="h1_reservation" >
   RESERVATION
 </h1>
-<p>
+<p class="p_reservation" >
   Vous pouvez réserver une table dans notre réstaurant, nous serons ravis de vous acceuillir
   et pour cela veuillez remplir les champs ci-dessous:
 </p>

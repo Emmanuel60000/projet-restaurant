@@ -81,7 +81,7 @@ if (isset($_GET["Acceuil"])) {
 <footer>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4"><br>
+            <div class="col-md-4 " ><br>
                 <h3 class="adresse">Localisation</h3><br>
                 <p class="adresse">7 rue Jean Racine</p>
                 <p class="adresse">Beauvais</p>
@@ -96,7 +96,7 @@ if (isset($_GET["Acceuil"])) {
                 
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 ">
                 <div class="mail">
                     <button class="e_mail">Email</button><br><br>
                     <p>Resaux sociaux</p>
