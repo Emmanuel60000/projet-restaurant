@@ -45,8 +45,8 @@
     <section>
         <div class="main">
             <!-- <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale"> -->
-            <h1 class="h1">Mentions légales</h1>
-            <h2 class="h2">Conditions générales de vente</h2>
+            <h1 class="main_ml_h1" >Mentions légales et Conditions générales de vente</h1>
+            
         </div>
     </section>
 
