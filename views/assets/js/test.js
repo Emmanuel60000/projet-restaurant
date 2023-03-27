@@ -52,3 +52,23 @@ function rotate() {
 window.setInterval(function(){
   rotate()
 }, 5000);
+
+// JS POUR LE BOUTON QUI PERMET DE REMONTER EN HAUT DE LA PAGE
+
+var boutonHaut = document.getElementById("bouton-haut");
+
+window.addEventListener("scroll", function() {
+if (window.scrollY > window.innerHeight) {
+boutonHaut.style.display = "block";
+} else {
+boutonHaut.style.display = "none";
+}
+});
+
+boutonHaut.addEventListener("click", function() {
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+});
+

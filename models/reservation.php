@@ -4,8 +4,7 @@ class Reservation extends Database
 {
     private $code_menu;
     private $code_clients;
-    private $nom_clients;
-    private $mail_clients;
+   
     private $date_reservation;
     private $nombredepersonne_reservation;
     private $heure_reservation;
@@ -27,22 +26,7 @@ class Reservation extends Database
     {
         return $this->code_clients = $code_clients;
     }
-    public function getNom_clients()
-    {
-        return $this->nom_clients;
-    }
-    public function setNom_clients($nom_clients)
-    {
-        return $this->nom_clients = $nom_clients;
-    }
-    public function getMail_clients()
-    {
-        return $this->mail_clients;
-    }
-    public function setMail_clients($mail_clients)
-    {
-        return $this->mail_clients = $mail_clients;
-    }
+   
     public function getDate_reservation()
     {
         return $this->date_reservation;
@@ -76,25 +60,18 @@ class Reservation extends Database
         return $this->commentaires = $commentaires;
     }
 
-    public function insert()
+    public function insert_reservation()
     {
-        $insertion = $this->pdo->prepare("INSERT INTO reservation(nom_clients,mail_clients
+        $insertion = $this->pdo->prepare("INSERT INTO reservation(code_clients,code_menu
     ,date_reservation,nombredepersonne_reservation,heure_reservation,commentaires)
       VALUES(?,?,?,?,?,?) ");
-        $insertion->bindValue(1, $this->nom_clients, PDO::PARAM_STR);
-        $insertion->bindValue(2, $this->mail_clients, PDO::PARAM_STR);
+        $insertion->bindValue(1, $this->code_clients, PDO::PARAM_INT);
+        $insertion->bindValue(2, $this->code_menu, PDO::PARAM_INT);
         $insertion->bindValue(3, $this->date_reservation, PDO::PARAM_INT);
         $insertion->bindValue(4, $this->nombredepersonne_reservation, PDO::PARAM_INT);
         $insertion->bindValue(5, $this->heure_reservation, PDO::PARAM_INT);
         $insertion->bindValue(6, $this->commentaires, PDO::PARAM_STR);
         $insertion->execute();
     }
-    public function verif()
-    {
-        $nbuser = $this->pdo->prepare("SELECT mail_clients,nom_clients FROM reservation  WHERE mail_clients = ? OR nom_clients=? ");
-        $nbuser->bindValue(1, $this->mail_clients, PDO::PARAM_STR);
-        $nbuser->bindValue(2, $this->nom_clients, PDO::PARAM_STR);
-        $nbuser->execute();
-        return $nbuser->fetch(PDO::FETCH_ASSOC);
-    }
+   
 }

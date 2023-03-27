@@ -24,9 +24,9 @@
 
   <form action="" method="post">
     <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required>
+    <input type="text" id="nom" name="nom_clients" required>
     <label for="prenom">Prénom :</label>
-    <input type="text" id="prenom" name="prenom" required>
+    <input type="text" id="prenom" name="prenom_clients" required>
     <label for="mail">Email</label>
     <input type="email" name="mail_clients"><br><br>
     <?php
@@ -37,11 +37,11 @@
       <p><?= $mailExiste ?></p>
     <?php } ?>
     <label for="tel">Téléphone :</label>
-    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+    <input type="tel" id="telephone" name="telephone_clients" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
     <label for="date">Date :</label>
-    <input type="date" id="date" name="date" required>
+    <input type="date" id="date" name="date_reservation" required>
     <label for="heure">Heure :</label>
-    <select id="heure" name="heure" required>
+    <select id="heure" name="heure_reservation" required>
       <option value="" selected disabled hidden>Choisir une heure</option>
       <optgroup label="Déjeuner">
         <option value="12:00">12:00</option>
@@ -59,7 +59,7 @@
       </optgroup>
     </select>
     <label for="personnes">Nombre de personnes :</label>
-    <input type="number" id="personnes" name="personnes" min="1" max="10" required>
+    <input type="number" id="personnes" name="nombredepersonne_reservation" min="1" max="10" required>
     <label for="commentaires">Commentaires :</label>
     <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
     <input type="submit" name="Réserver" value="Réserver">

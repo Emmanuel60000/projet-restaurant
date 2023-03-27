@@ -154,17 +154,18 @@
 
 /* style pour le lien reservation */
 .reservation {
-    color: white;
+    color: red;
     text-decoration: none;
     position: absolute;
     right: 20px;
     top: 30%;
-    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    font-size: 1em;
 }
+
 
 /* style lorsque la souris passe sur le lien reservation */
 .reservation:hover {
-    color: red;
+    color: white;
 }
 
 /* style por l'image 2 */
@@ -184,9 +185,11 @@
     color: white;
     text-align: center;
     width: 100%;
-    font-size: 4em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 4px 4px;
+    font-size: 6em;
+    font-family: 'LoveMeChainV2MonoLight',sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-shadow: 3px 3px;
     color: #b30000;
 }
 
@@ -291,7 +294,8 @@ h3 {
 
 /* style pour le footer */
 footer {
-    background-color: #d1c2c2;;
+    background-color: #d1c2c2;
+    ;
 }
 
 /* style pour les avis dans le footer */
@@ -397,14 +401,16 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #c7a8a8;
 }
-.h1_reservation{
+
+.h1_reservation {
     font-size: 3em;
     color: green;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.p_reservation{
+
+.p_reservation {
     font-size: 2em;
     color: #b30000;
     text-align: center;
@@ -482,7 +488,31 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
+/* menu-item {
+    position: relative;
+  } */
 
+/* .menu-item:hover  {
+    animation: shake 0.8s;
+  } */
+.menu-item:hover {
+    transform: scale(1.10);
+    transition: all 0.2s ease-in-out;
+}
+
+/* .menu-item img:hover {
+    transform: rotate(360deg);
+    transition: all 0.2s ease-in-out;
+  } */
+
+
+/* @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(10px); }
+    50% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+  } */
 
 
 /* CSS DE LA PAGE BIOGRAPHIE */
@@ -839,28 +869,150 @@ input[type="submit"]:hover {
     opacity: 1;
 }
 
+/* css pour le fleche qui permet de remonter en haut du site */
+#bouton-haut {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(250, 250, 253);
+    color: rgb(201, 90, 90);
+    padding: 10px;
+    font-size: 8px;
+    cursor: pointer;
+}
+
+.fleche {
+    border: solid rgb(199, 68, 68);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(-135deg);
+}
 
 
+/* MEDIA QUERIES OUR LA PAGE DES MENUS */
 
 
+/* / Ajuster la largeur des éléments du menu / */
+@media screen and (max-width: 768px) {
+    .menu-item {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .menu-item {
+        width: 100%;
+    }
+}
+
+/* / Ajuster la taille des images / */
+/* @media screen and (max-width: 576px) {
+    .menu-item img {
+    width: 100%;
+    height: auto;
+    }
+    } */
+
+/* / Ajuster la hauteur de chaque élément du menu pour qu'ils soient de même hauteur / */
+/* @media screen and (min-width: 768px) {
+    .menu-item {
+    height: 25em;
+    }
+    } */
+
+/* / Ajouter un espace supplémentaire entre les éléments du menu / */
+/* .menu-item {
+    margin: 10px;
+    } */
+
+/* / Ajuster la taille de la police de caractères pour la description de l'article */
+/* .menu-item p {
+    font-size: 1rem;
+    } */
 
 
-/* @media (max-width:700px) {
+/* MEDIA QUERIES POUR LA NAVBAR */
+
+@media screen and (max-width: 768px) {
+
+    /* Masquer les liens de la navbar et afficher le bouton de menu / */
+    /* .navlinks-container {
+    display: none;
+    }
+    
+    .button {
+    display: flex;
+    } */
+
+    /* / Styles pour le bouton de menu / */
+    /* .button span {
+    background: white;
+    }
+    
+    .button span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .button span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    .button span:nth-child(2) {
+    opacity: 0;
+    } */
+
+    /* / Styles pour afficher les liens de la navbar lorsque le menu est ouvert / */
+    /* .open .navlinks-container {
+    display: block;
+    transform: translate(0);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: black;
+    z-index: 999;
+    }
+    
+    .open .navlinks-container a {
+    color: white;
+    font-size: 1.5em;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    } */
+
+    /* / Style pour le logo / */
     .nav .image {
         position: absolute;
-        max-height: 34px;
-        max-width: 30px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: none;
+        margin: auto;
+        width: 6em;
+        height: 100%;
     }
 
-    .image2 {
+    /* / Style pour le lien reservation / */
+    /* .reservation {
+    display: none;
+    } */
+}
 
-        min-width: 100%;
-        min-height: 700px;
-        background-repeat: no-repeat;
-    }
+/* / Style pour les petits écrans (max-width: 576px) / */
+@media screen and (max-width: 576px) {
 
-    .navlinks-container {
-        height: 70vh;
-        width: 22vh;
+    /* / Style pour les liens de la navbar / */
+    /* .navlinks-container a {
+    font-size: 1.2em;
+    } */
+
+    /* / Style pour le logo */
+    .nav .image {
+        width: 4em;
     }
-} */
+}

@@ -6,9 +6,7 @@ class Clients extends Database {
     private $prenom_clients;
     private $mail_clients;
     private $telephone_clients;
-    private $DDN_clients;
-    private $adresse_clients;
-    private $habitudes_clients;
+  
     
 
     public function getCode_clients()
@@ -51,29 +49,29 @@ class Clients extends Database {
     {
         return $this->telephone_clients = $telephone_clients;
     }
-    public function getDDN_clients()
+    
+
+    public function insert_clients()
     {
-        return $this->DDN_clients;
+        $insertion = $this->pdo->prepare("INSERT INTO reservation(code_clients,nom_clients,prenom_clients,mail_clients
+    ,telephone_clients)
+      VALUES(?,?,?,?,?,?) ");
+      $insertion->bindValue(1, $this->code_clients, PDO::PARAM_INT);
+        $insertion->bindValue(2, $this->nom_clients, PDO::PARAM_STR);
+        $insertion->bindValue(3, $this->prenom_clients, PDO::PARAM_STR);
+        $insertion->bindValue(4, $this->mail_clients, PDO::PARAM_STR);
+        $insertion->bindValue(5, $this->telephone_clients, PDO::PARAM_INT);
+       
+        
+        $insertion->execute();
     }
-    public function setDDN_clients($DDN_clients)
+    public function verif()
     {
-        return $this->DDN_clients = $DDN_clients;
-    }
-    public function getAdresse_clients()
-    {
-        return $this->adresse_clients;
-    }
-    public function setAdresse_clients($adresse_clients)
-    {
-        return $this->adresse_clients = $adresse_clients;
-    }
-    public function getHabitudes_clients()
-    {
-        return $this->habitudes_clients;
-    }
-    public function setHabitudes_clients($habitudes_clients)
-    {
-        return $this->habitudes_clients = $habitudes_clients;
+        $nbuser = $this->pdo->prepare("SELECT mail_clients,nom_clients FROM clients  WHERE mail_clients = ? OR nom_clients=? ");
+        $nbuser->bindValue(1, $this->mail_clients, PDO::PARAM_STR);
+        $nbuser->bindValue(2, $this->nom_clients, PDO::PARAM_STR);
+        $nbuser->execute();
+        return $nbuser->fetch(PDO::FETCH_ASSOC);
     }
     
 }

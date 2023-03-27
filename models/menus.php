@@ -3,6 +3,7 @@
 class Menus extends Database{
     private $code_menu;
     private $nom_menu;
+    private $type_menu;
     private $description_menu;
     private $prix_menu;
 
@@ -21,6 +22,14 @@ class Menus extends Database{
     public function setNom_menu($nom_menu)
     {
         return $this->nom_menu = $nom_menu;
+    }
+    public function getType_menu()
+    {
+        return $this->type_menu;
+    }
+    public function setType_menu($type_menu)
+    {
+        return $this->type_menu = $type_menu;
     }
     public function getDescription_menu()
     {
