@@ -1,6 +1,6 @@
 <?php
 
 const HOST = "localhost";
-    const DBNAME = "projet_restaurant";
+    const DBNAME = "restaurant";
     const LOGIN = "root";
     const PASSWORD = "";

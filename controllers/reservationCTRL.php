@@ -3,7 +3,8 @@
 $message = "";
 $reservation = new Reservation();
 $clients = new Clients();
-
+$choixmenu= new Menus();
+$menu=$choixmenu->choix_menu();
 
 
 //Le traitement du formulaire
@@ -50,6 +51,11 @@ if (isset($_POST["Réserver"])) {
     } else {
         $error['nombredepersonne_reservation'] = "Le nombre de nombredepersonne_reservation est manquante";
     }
+    if (isset($_POST["choix_menu"]) && !empty($_POST["choix_menu"])) {
+        $choix_menu = (int)$_POST["choix_menu"];
+    } else {
+        $error['choix_menu'] = "Le choix menu est manquant";
+    }
     if (isset($_POST["commentaires"]) && !empty($_POST["commentaires"])) {
         $commentaires = $_POST["commentaires"];
     } else {
@@ -59,7 +65,7 @@ if (isset($_POST["Réserver"])) {
     if (empty($error)) {
 
         $clients->setNom_clients($nom_clients);
-        $clients->setprenom_clients($prenom_clients);
+        $clients->setPrenom_clients($prenom_clients);
         $clients->setMail_clients($email);
         $clients->setTelephone_clients($telephone_clients);
 
@@ -67,19 +73,29 @@ if (isset($_POST["Réserver"])) {
         $reservation->setHeure_reservation($heure_reservation);
         $reservation->setNombredepersonne_reservation($nombredepersonne_reservation);
         $reservation->setCommentaires($commentaires);
-
+        $reservation->setCode_menu($choix_menu);
         $user = $clients->verif();
 
         if ($user === false) {
             echo "pass";
-            $reservation->insert_reservation();
+           
             $clients->insert_clients();
+            $user = $clients->verif();
+            $reservation->setCode_clients($user["code_clients"]);
+            $reservation->insert_reservation();
             $message = "La reservation a bien été prise";
             header("Location:index.php?Acceuil");
         } else {
-            if ($user["mail_clients"] === $email) {
-                $mailExiste = "le mail n'est pas disponible";
-            }
+            $reservation->setCode_clients($user["code_clients"]);
+            $reservation->insert_reservation();
+            // if ($user["mail_clients"] === $email) {
+            //     $mailExiste = "le mail n'est pas disponible";
+
+            // }
         }
     }
 }
+
+
+
+

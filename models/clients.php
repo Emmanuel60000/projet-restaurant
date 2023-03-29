@@ -53,21 +53,20 @@ class Clients extends Database {
 
     public function insert_clients()
     {
-        $insertion = $this->pdo->prepare("INSERT INTO reservation(code_clients,nom_clients,prenom_clients,mail_clients
-    ,telephone_clients)
-      VALUES(?,?,?,?,?,?) ");
-      $insertion->bindValue(1, $this->code_clients, PDO::PARAM_INT);
-        $insertion->bindValue(2, $this->nom_clients, PDO::PARAM_STR);
-        $insertion->bindValue(3, $this->prenom_clients, PDO::PARAM_STR);
-        $insertion->bindValue(4, $this->mail_clients, PDO::PARAM_STR);
-        $insertion->bindValue(5, $this->telephone_clients, PDO::PARAM_INT);
+        var_dump($this->nom_clients);
+        $insertion = $this->pdo->prepare("INSERT INTO clients(nom_clients,prenom_clients,mail_clients,telephone_clients) VALUES(?,?,?,?)");
+      
+        $insertion->bindValue(1, $this->nom_clients, PDO::PARAM_STR);
+        $insertion->bindValue(2, $this->prenom_clients, PDO::PARAM_STR);
+        $insertion->bindValue(3, $this->mail_clients, PDO::PARAM_STR);
+        $insertion->bindValue(4, $this->telephone_clients, PDO::PARAM_STR);
        
         
         $insertion->execute();
     }
     public function verif()
     {
-        $nbuser = $this->pdo->prepare("SELECT mail_clients,nom_clients FROM clients  WHERE mail_clients = ? OR nom_clients=? ");
+        $nbuser = $this->pdo->prepare("SELECT code_clients,mail_clients,nom_clients FROM clients  WHERE mail_clients = ? OR nom_clients=? ");
         $nbuser->bindValue(1, $this->mail_clients, PDO::PARAM_STR);
         $nbuser->bindValue(2, $this->nom_clients, PDO::PARAM_STR);
         $nbuser->execute();

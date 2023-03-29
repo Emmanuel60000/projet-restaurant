@@ -67,9 +67,9 @@ class Reservation extends Database
       VALUES(?,?,?,?,?,?) ");
         $insertion->bindValue(1, $this->code_clients, PDO::PARAM_INT);
         $insertion->bindValue(2, $this->code_menu, PDO::PARAM_INT);
-        $insertion->bindValue(3, $this->date_reservation, PDO::PARAM_INT);
+        $insertion->bindValue(3, $this->date_reservation, PDO::PARAM_STR);
         $insertion->bindValue(4, $this->nombredepersonne_reservation, PDO::PARAM_INT);
-        $insertion->bindValue(5, $this->heure_reservation, PDO::PARAM_INT);
+        $insertion->bindValue(5, $this->heure_reservation, PDO::PARAM_STR);
         $insertion->bindValue(6, $this->commentaires, PDO::PARAM_STR);
         $insertion->execute();
     }

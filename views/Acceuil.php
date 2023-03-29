@@ -1,10 +1,10 @@
-
 <main>
     <div class="main">
         <img class="image2" src="https://images.unsplash.com/photo-1576156740287-3eed61ad5b97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="photo barrio alto">
         <h1 class="h1">Le BARRIO ALTO</h1>
+        <h2 class="h2">Réstaurant Portugais</h2>
 
-   
+    </div>
     </section>
     <section>
         <div class="container-fluid ">
@@ -70,6 +70,6 @@
         </div>
 
     </section>
- 
+
 
 </main>

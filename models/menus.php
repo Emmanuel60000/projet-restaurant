@@ -47,5 +47,10 @@ class Menus extends Database{
     {
         return $this->prix_menu = $prix_menu;
     }
+    public function choix_menu(){
+        $choix_menu = $this->pdo->query("SELECT * FROM menus WHERE type_menu='plats'");
+        return $choix_menu->fetchAll(PDO::FETCH_ASSOC);
+    }
+   
 
 }

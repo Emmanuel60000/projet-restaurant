@@ -192,6 +192,22 @@
     text-shadow: 3px 3px;
     color: #b30000;
 }
+.h2 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    font-family: 'LoveMeChainV2MonoLight',sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-shadow: 3px 3px;
+    color: #b30000;
+  }
+  
 
 
 /* style por l'image 1 */

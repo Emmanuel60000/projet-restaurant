@@ -40,7 +40,7 @@ include("models/clients.php");
             <a href="#horaire">Horaires</a>
         </div>
         <div>
-            <img class="image" src="views/assets/img/aldenaire2.jpg" alt="logo">
+        <a href="index.php?Acceuil"><img class="image" src="views/assets/img/aldenaire2.jpg" alt="logo"></a>  
         </div>
         <div>
             <a class="reservation" href="index.php?reservation">RESERVATION</a>
@@ -52,27 +52,29 @@ include("models/clients.php");
 <?php
 if (isset($_GET["Acceuil"])) {
     include_once("views/Acceuil.php");
-} else if (isset($_GET["reservation"])) {
-    include_once("views/reservation.php");
+} elseif (isset($_GET["reservation"])) {
     include_once("controllers/reservationCTRL.php");
-} else if (isset($_GET["mentions_legales"])) {
+    include_once("views/reservation.php");   
+} elseif (isset($_GET["mentions_legales"])) {
     include_once("views/mentions_legales.php");
-} else if (isset($_GET["biographie"])) {
+} elseif (isset($_GET["biographie"])) {
     include_once("views/biographie.php");
-} else if (isset($_GET["gallerie"])) {
+} elseif (isset($_GET["gallerie"])) {
     include_once("views/gallerie.php");
-} else if (isset($_GET["evenements"])) {
+} elseif (isset($_GET["evenements"])) {
     include_once("views/evenements.php");
-} else if (isset($_GET["menu_presentation"])) {
+} elseif (isset($_GET["menu_presentation"])) {
     include_once("views/menu_presentation.php");
-} else if (isset($_GET["menu_entrees"])) {
+} elseif (isset($_GET["menu_entrees"])) {
     include_once("views/menu_entrees.php");
-} else if (isset($_GET["menu_plats"])) {
+} elseif (isset($_GET["menu_plats"])) {
     include_once("views/menu_plats.php");
-} else if (isset($_GET["menu_desserts"])) {
+} elseif (isset($_GET["menu_desserts"])) {
     include_once("views/menu_desserts.php");
-} else if (isset($_GET["menu_vins"])) {
+} elseif (isset($_GET["menu_vins"])) {
     include_once("views/menu_vins.php");
+}else{
+    include_once("views/Acceuil.php");
 }
 ?>
 
