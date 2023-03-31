@@ -11,16 +11,44 @@ $menu=$choixmenu->choix_menu();
 if (isset($_POST["Réserver"])) {
     $error = [];
 
+    // if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
+    //     $nom_clients = $_POST["nom_clients"];
+    // } else {
+    //     $error['nom_clients'] = "Le nom_clients est manquant";
+    // }
+    // if (isset($_POST["prenom_clients"]) && !empty($_POST["prenom_clients"])) {
+    //     $prenom_clients = $_POST["prenom_clients"];
+    // } else {
+    //     $error['prenom_clients'] = "Le prenom_clients est manquant";
+    // }
     if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
         $nom_clients = $_POST["nom_clients"];
+        if (!preg_match("/^[a-zA-Z ]+$/", $nom_clients)) {
+            $error['nom_clients'] = "Le nom ne doit contenir que des lettres alphabétiques et des espaces";
+        } elseif (mb_strlen($nom_clients) < 2 || mb_strlen($nom_clients) > 50) {
+            $error['nom_clients'] = "Le nom doit contenir entre 2 et 50 caractères";
+        }
     } else {
-        $error['nom_clients'] = "Le nom_clients est manquant";
+        $error['nom_clients'] = "Le nom est manquant";
     }
+    
     if (isset($_POST["prenom_clients"]) && !empty($_POST["prenom_clients"])) {
         $prenom_clients = $_POST["prenom_clients"];
+        if (!preg_match("/^[a-zA-Z ]+$/", $prenom_clients)) {
+            $error['prenom_clients'] = "Le prénom ne doit contenir que des lettres alphabétiques et des espaces";
+        } elseif (mb_strlen($prenom_clients) < 2 || mb_strlen($prenom_clients) > 50) {
+            $error['prenom_clients'] = "Le prénom doit contenir entre 2 et 50 caractères";
+        }
     } else {
-        $error['prenom_clients'] = "Le prenom_clients est manquant";
+        $error['prenom_clients'] = "Le prénom est manquant";
     }
+    
+
+
+
+
+
+    
     if (isset($_POST["mail_clients"]) && !empty($_POST["mail_clients"])) {
         if (filter_var($_POST["mail_clients"], FILTER_VALIDATE_EMAIL)) {
             $email = $_POST["mail_clients"];
@@ -30,6 +58,11 @@ if (isset($_POST["Réserver"])) {
     } else {
         $error['mail_clients'] = "Le champ email est manquant";
     }
+
+
+
+
+
     if (isset($_POST["telephone_clients"]) && !empty($_POST["telephone_clients"])) {
         $telephone_clients = $_POST["telephone_clients"];
     } else {

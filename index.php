@@ -18,13 +18,16 @@ include("models/clients.php");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick-theme.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/love-me-chain-v2-monospaced" type="text/css"/>    <link rel="stylesheet" href="views/assets/css/style.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/love-me-chain-v2-monospaced" type="text/css" />
+    <link rel="stylesheet" href="views/assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    
     <title>projet restaurant</title>
 </head>
 <header>
     <nav class="nav">
         <div class="main-navlinks">
-            <button class="button" type="button">
+            <button id="menu-btn" class="button" type="button">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -40,7 +43,7 @@ include("models/clients.php");
             <a href="#horaire">Horaires</a>
         </div>
         <div>
-        <a href="index.php?Acceuil"><img class="image" src="views/assets/img/aldenaire2.jpg" alt="logo"></a>  
+            <a href="index.php?Acceuil"><img class="image" src="views/assets/img/aldenaire2.jpg" alt="logo"></a>
         </div>
         <div>
             <a class="reservation" href="index.php?reservation">RESERVATION</a>
@@ -54,7 +57,7 @@ if (isset($_GET["Acceuil"])) {
     include_once("views/Acceuil.php");
 } elseif (isset($_GET["reservation"])) {
     include_once("controllers/reservationCTRL.php");
-    include_once("views/reservation.php");   
+    include_once("views/reservation.php");
 } elseif (isset($_GET["mentions_legales"])) {
     include_once("views/mentions_legales.php");
 } elseif (isset($_GET["biographie"])) {
@@ -73,7 +76,7 @@ if (isset($_GET["Acceuil"])) {
     include_once("views/menu_desserts.php");
 } elseif (isset($_GET["menu_vins"])) {
     include_once("views/menu_vins.php");
-}else{
+} else {
     include_once("views/Acceuil.php");
 }
 ?>
@@ -83,7 +86,7 @@ if (isset($_GET["Acceuil"])) {
 <footer>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 " ><br>
+            <div class="col-md-4 "><br>
                 <h3 class="adresse">Localisation</h3><br>
                 <p class="adresse">7 rue Jean Racine</p>
                 <p class="adresse">Beauvais</p>
@@ -95,7 +98,7 @@ if (isset($_GET["Acceuil"])) {
                 <h3 class="heure">Heure d'ouverture</h3><br>
                 <p class="heure" id="horaire">Ouvert du mardi au dimanche de 12 heure a 14 heure 30<br><br> puis de 18 heure a 23
                     heure</p>
-                
+
 
             </div>
             <div class="col-md-4 ">
@@ -133,11 +136,12 @@ if (isset($_GET["Acceuil"])) {
 
 </footer>
 <button id="bouton-haut" title="Remonter en haut">
-  <span class="fleche"></span>
+    <span class="fleche"></span>
 </button>
 </body>
 <script src="views/assets/js/test.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 
 </html>

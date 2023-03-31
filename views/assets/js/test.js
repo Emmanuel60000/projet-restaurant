@@ -9,8 +9,10 @@ const toggleNav = e => {
 
 buttonToggler.addEventListener("click", toggleNav)
 
-
-
+// document.getElementById('menu-btn').addEventListener('click', function() {
+//   document.querySelector('.navlinks-container').classList.toggle('open');
+//   document.querySelector('.button').classList.toggle('open');
+// });
 
 // js pour la gallerie d'image
 const thumbnails = document.querySelectorAll('.thumbnails img');
@@ -71,4 +73,45 @@ top: 0,
 behavior: "smooth"
 });
 });
+
+
+
+
+// Créer une timeline
+var tl = gsap.timeline();
+
+// Ajouter l'animation pour le titre h1
+tl.fromTo("#title1", { x: "100%" }, { x: "0%", duration: 2 });
+
+// Ajouter l'animation pour le titre h2
+tl.fromTo("#title2", { x: "100%" }, { x: "0%", duration: 2 }, "-=0.5");
+
+
+
+
+
+
+
+// sélectionnez les éléments à observer
+const progressiveTextElements = document.querySelectorAll('.progressive-text');
+
+// configurez l'observateur
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+});
+
+// ajoutez chaque élément à observer à l'observateur
+progressiveTextElements.forEach((element) => {
+  observer.observe(element);
+});
+
+
+
+
+
+
 
