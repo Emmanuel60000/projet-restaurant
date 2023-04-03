@@ -43,7 +43,7 @@ include("models/clients.php");
             <a href="#horaire">Horaires</a>
         </div>
         <div>
-            <a href="index.php?Acceuil"><img class="image" src="views/assets/img/aldenaire2.jpg" alt="logo"></a>
+            <a href="index.php?Acceuil"><img class="image" src="views/assets/img/barrio_alto.png" alt="logo"></a>
         </div>
         <div>
             <a class="reservation" href="index.php?reservation">RESERVATION</a>

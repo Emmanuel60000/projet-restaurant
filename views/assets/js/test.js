@@ -92,10 +92,11 @@ tl.fromTo("#title2", { x: "100%" }, { x: "0%", duration: 2 }, "-=0.5");
 
 // js pour l'animation du texte de la page d'accueil
 
-// sélectionnez les éléments à observer
+// sélectionne les éléments à observer
 const progressiveTextElements = document.querySelectorAll('.progressive-text');
 
-// configurez l'observateur
+
+// configure l'observateur
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -104,9 +105,23 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-// ajoutez chaque élément à observer à l'observateur
+// ajoute chaque élément à observer à l'observateur
 progressiveTextElements.forEach((element) => {
   observer.observe(element);
+});
+
+
+// Javascript pour les boutons de la page d'accueil
+const buttons = document.querySelectorAll('.progressive-element');
+
+window.addEventListener('scroll', () => {
+  buttons.forEach(button => {
+    const buttonTop = button.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (buttonTop < windowHeight - 200) {
+      button.classList.add('active');
+    }
+  });
 });
 
 

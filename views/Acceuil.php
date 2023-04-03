@@ -25,8 +25,8 @@
                         Francesinha ou le cozido a Portuguesa. <br>Toute l'equipe vous attend pour un agréable
                         moment
                     </p>
-                    <a href="index.php?menu_presentation"> <button class="menu">Menu</button></a>
-                    <a href="index.php?gallerie"> <button class="galerie">Galerie</button></a>
+                    <a  href="index.php?menu_presentation"> <button class="menu  progressive-element">Menu</button></a>
+                    <!-- <a href="index.php?gallerie"> <button class="galerie">Galerie</button></a> -->
 
                 </div>
 
@@ -50,7 +50,7 @@
                         nature qu'il
                         transforme en singulière promenade Lisboète
                     </p>
-                    <a href="index.php?biographie"><button class="biographie">Biographie</button></a>
+                    <a href="index.php?biographie"><button class="biographie  progressive-element">Biographie</button></a>
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                     Notre restaurant organise régulierement
                     différents événements
                 </p>
-                <a href="index.php?evenements"><button class="ensavoirplus">En savoir plus</button></a>
+                <a href="index.php?evenements"><button class="ensavoirplus  progressive-element">En savoir plus</button></a>
             </div>
 
             <div class="article_accueil">
