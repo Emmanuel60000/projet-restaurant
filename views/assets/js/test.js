@@ -90,7 +90,7 @@ tl.fromTo("#title2", { x: "100%" }, { x: "0%", duration: 2 }, "-=0.5");
 
 
 
-
+// js pour l'animation du texte de la page d'accueil
 
 // sélectionnez les éléments à observer
 const progressiveTextElements = document.querySelectorAll('.progressive-text');
