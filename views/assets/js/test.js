@@ -77,7 +77,7 @@ behavior: "smooth"
 
 
 
-// Créer une timeline
+// timeline sur les titres de la page d'accueil
 var tl = gsap.timeline();
 
 // Ajouter l'animation pour le titre h1
@@ -90,7 +90,7 @@ tl.fromTo("#title2", { x: "100%" }, { x: "0%", duration: 2 }, "-=0.5");
 
 
 
-// js pour l'animation du texte de la page d'accueil
+// js pour l'animation du texte et des boutons de la page d'accueil
 
 // sélectionne les éléments à observer
 const progressiveTextElements = document.querySelectorAll('.progressive-text');
@@ -111,18 +111,6 @@ progressiveTextElements.forEach((element) => {
 });
 
 
-// Javascript pour les boutons de la page d'accueil
-const buttons = document.querySelectorAll('.progressive-element');
-
-window.addEventListener('scroll', () => {
-  buttons.forEach(button => {
-    const buttonTop = button.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    if (buttonTop < windowHeight - 200) {
-      button.classList.add('active');
-    }
-  });
-});
 
 
 

@@ -17,15 +17,16 @@
 
         <section>
             <div class="section_article">
-                <div class="article_accueil ">
-                    <p class="p1 progressive-text">
+                <div class="article_accueil progressive-text">
+                    <p class="p1 ">
                         Le réstaurant vous invite a un voyage au Portugal.Venez dégustez entre amies nos
                         spécialités
                         comme la
                         Francesinha ou le cozido a Portuguesa. <br>Toute l'equipe vous attend pour un agréable
                         moment
+                       
                     </p>
-                    <a  href="index.php?menu_presentation"> <button class="menu  progressive-element">Menu</button></a>
+                    <a  href="index.php?menu_presentation"> <button class="menu  ">Menu</button></a>
                     <!-- <a href="index.php?gallerie"> <button class="galerie">Galerie</button></a> -->
 
                 </div>
@@ -44,25 +45,29 @@
                 <div class="article_accueil ">
                     <img class="m-0 img2" id="mon-image" src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" alt="cuisinier">
                 </div>
-                <div class="article_accueil ">
-                    <p class="p2 progressive-text">
+                <div class="article_accueil progressive-text">
+                    <p class="p2 ">
                         Paolo Sarri chef cuisinier arpente le Portugal a la recherche des meilleurs produits de la
                         nature qu'il
                         transforme en singulière promenade Lisboète
+
                     </p>
-                    <a href="index.php?biographie"><button class="biographie  progressive-element">Biographie</button></a>
+                    <a href="index.php?biographie"><button class="biographie  ">Biographie</button></a>
+
                 </div>
             </div>
 
         </section>
         </section>
         <div class="section_article">
-            <div class="article_accueil   ">
-                <p class="p1 progressive-text">
+            <div class="article_accueil progressive-text  ">
+                <p class="p1 ">
                     Notre restaurant organise régulierement
                     différents événements
+
                 </p>
-                <a href="index.php?evenements"><button class="ensavoirplus  progressive-element">En savoir plus</button></a>
+                <a href="index.php?evenements"><button class="ensavoirplus  ">En savoir plus</button></a>
+
             </div>
 
             <div class="article_accueil">
