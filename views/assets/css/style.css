@@ -1,5 +1,7 @@
 /* Réinitialise les marges et les paddings pour tous les éléments */
-* ::after ::before {
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +15,7 @@
     background-color: aliceblue;
 }
 
-  
+
 
 /* Style pour la barre de navigation */
 .nav {
@@ -26,7 +28,7 @@
     padding: 2%;
     z-index: 1;
     height: 5em;
-    
+
 }
 
 /* Style pour le bouton de menu */
@@ -161,7 +163,7 @@
     margin: auto;
     width: 10vw;
     height: 5em;
-    
+
 }
 
 /* style pour le lien reservation */
@@ -184,7 +186,7 @@
 .image2 {
     height: 40em;
     width: 100%;
-    
+
 }
 
 /* style pour le titre h1 le barrio alto */
@@ -228,30 +230,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-  }
-  
-  .article_accueil {
-    flex-basis: calc(50% );
+
+}
+
+.article_accueil {
+    flex-basis: calc(50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-  }
-  
-  .img1,
-  .img2,
-  .img3 {
+
+}
+
+.img1,
+.img2,
+.img3 {
     width: 100%;
-    height:40rem;
-   
-  }
-  
-  .galerie,
-  .ensavoirplus {
-    
-    margin-bottom: 1em; 
+    height: 40rem;
+
+}
+
+.galerie,
+.ensavoirplus {
+
+    margin-bottom: 1em;
     background-color: green;
     border: none;
     color: white;
@@ -262,26 +264,28 @@
     font-size: 16px;
     font-weight: bold;
     margin-top: 30px;
-   
-  }
-.menu{ 
-  margin-top: 2em;
-  margin-bottom: 1em; 
-  background-color: green;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
- 
- 
+
 }
-  .biographie{
-    
-    margin-bottom: 1em; 
+
+.menu {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+
+
+}
+
+.biographie {
+
+    margin-bottom: 1em;
     background-color: red;
     border: none;
     color: white;
@@ -292,27 +296,27 @@
     font-size: 16px;
     font-weight: bold;
     margin-top: 30px;
-   
-  }
- 
-  .p1
-   {
+
+}
+
+.p1 {
     margin: 20px 0;
     text-align: center;
     font-size: 2em;
     color: red;
-  }
-  .p2{
+}
+
+.p2 {
     margin: 20px 0;
     text-align: center;
     font-size: 2em;
     color: #2f702f;
-  }
- 
-  .body_acceuil{
-      overflow-x: hidden;
+}
+
+.body_acceuil {
+    overflow-x: hidden;
     /* cache la barre de défilement horizontale */
-  }
+}
 
 /* style pour les titres h3 */
 /* h3 {
@@ -320,63 +324,68 @@
 } */
 
 
-  /* css animation pour le texte p1 et p2 de la page d'accueil */
-  .progressive-text {
+/* css animation pour le texte p1 et p2 de la page d'accueil */
+.progressive-text {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 2s, transform 1.5s;
-  }
-  
-  .progressive-text.active {
+}
+
+.progressive-text.active {
     opacity: 1;
     transform: translateY(0);
-  }
-  
+}
+
 
 
 /* css pour le footer */
-  footer {
+footer {
     background-color: #b8b2b2;
     padding: 50px 0;
     font-size: 0.5em;
-  }
-  
-  .left-section, .center-section, .right-section {
+}
+
+.left-section,
+.center-section,
+.right-section {
     display: inline-block;
     width: 33%;
     text-align: center;
     vertical-align: top;
-  }
-  
-  .adresse, .heure, .e_mail {
+}
+
+.adresse,
+.heure,
+.e_mail {
     font-family: 'Love Me Chain V2 Monospaced', serif;
     font-size: 2em;
     font-weight: bold;
-  }
-  
-  #contact {
+}
+
+#contact {
     margin-top: 30px;
-  }
-  
-  .mail {
+}
+
+.mail {
     font-size: 1em;
-  }
-  
-  .btn {
+}
+
+.btn {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #121213;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 14px;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: #0069d9;
-  }
-  .e_mail {
-    background-color:red;
+}
+
+.e_mail {
+    background-color: red;
     color: whitesmoke;
     border: none;
     padding: 10px 20px;
@@ -384,28 +393,32 @@
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.3s ease;
-  }
-  
-  .e_mail:hover {
+}
+
+.e_mail:hover {
     background-color: #fff;
     color: #ff2d55;
     border: 2px solid #ff2d55;
     cursor: pointer;
-  }
-  .mention_legales{
+}
+
+.mention_legales {
     font-size: 2em;
     text-decoration: none;
-  }
-  .resaux_sociaux{
+    color: black;
+}
+
+.resaux_sociaux {
     font-size: 2em;
-  }
-  .bas_de_page {
+}
+
+.bas_de_page {
     background-color: black;
     padding: 20px;
     text-align: center;
     font-size: 14px;
     color: #f7ecec;
-  }
+}
 
 
 /* css pour les mentions légales */
@@ -700,6 +713,27 @@ input[type="submit"]:hover {
     margin-top: 1em;
 }
 
+
+
+/* Titre de la section */
+.h2_gallerie {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: red;
+}
+
+/* Paragraphe principal */
+.p_gallerie {
+    font-size: 1.2em;
+    font-family: 'ConcreteRegular', sans-serif;
+    font-weight: bold;
+    font-style: normal
+}
+
+
 /* CSS POUR LA PAGE EVENEMENTS */
 
 
@@ -737,8 +771,8 @@ input[type="submit"]:hover {
 .box7 {
     width: 100%;
     height: 400px;
-    background-size: cover;
-    background-position: center center;
+    /* background-size: cover;
+    background-position: center center; */
     transition: transform 0.5s ease-in-out;
     /* ajouter une transition pour l'effet de défilement */
 }
@@ -989,36 +1023,59 @@ input[type="submit"]:hover {
 }
 
 
-/* MEDIA QUERIES OUR LA PAGE DES MENUS */
+/* MEDIA QUERIES POUR LA PAGE DES MENUS */
 
 
 /* / Ajuster la largeur des éléments du menu / */
-@media screen and (max-width: 768px) {
-    .menu-item {
-        width: 45%;
+@media only screen and (min-width: 550px) and (max-width: 850px) {
+
+    /* Ajouter un espace supplémentaire en haut de la page */
+    .menu-h1 {
+        font-size: 2.5rem;
+        margin-top: 10px;
     }
+
+    /* Ajouter un espace supplémentaire entre les sections */
+    .menu-h2 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    /* Style des articles du menu */
+    .menu-item {
+        display: inline-block;
+        width: 45%;
+        margin: 10px;
+        height: 30em;
+        align-items: center;
+    }
+
 }
 
-@media screen and (max-width: 576px) {
-    .menu-item {
-        width: 100%;
-    }
-}
+
 
 /* / Ajuster la taille des images / */
-/* @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
     .menu-item img {
-    width: 100%;
-    height: auto;
+        width: 80%;
+        height: auto;
     }
-    } */
 
-/* / Ajuster la hauteur de chaque élément du menu pour qu'ils soient de même hauteur / */
-/* @media screen and (min-width: 768px) {
     .menu-item {
-    height: 25em;
+        height: auto;
+        width: auto;
     }
-    } */
+
+    .menu-h1 {
+        font-size: 2em;
+    }
+
+    .menu-h2 {
+        font-size: 1.5em;
+    }
+}
+
+
 
 /* / Ajouter un espace supplémentaire entre les éléments du menu / */
 /* .menu-item {
@@ -1062,7 +1119,7 @@ input[type="submit"]:hover {
     } */
 
     /* / Styles pour afficher les liens de la navbar lorsque le menu est ouvert / */
-    /* .open .navlinks-container {
+    .open .navlinks-container {
     display: block;
     transform: translate(0);
     position: absolute;
@@ -1075,13 +1132,14 @@ input[type="submit"]:hover {
     z-index: 999;
     }
     
+
     .open .navlinks-container a {
     color: white;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 1em;
     display: block;
     text-align: center;
-    } */
+    }
 
     /* / Style pour le logo / */
     .nav .image {
@@ -1096,9 +1154,11 @@ input[type="submit"]:hover {
     }
 
     /* / Style pour le lien reservation / */
-    /* .reservation {
-    display: none;
-    } */
+    .reservation {
+        font-size: 0.7em;
+        top: 3em;
+        right: 1%;
+    }
 }
 
 /* / Style pour les petits écrans (max-width: 576px) / */
@@ -1173,66 +1233,70 @@ input[type="submit"]:hover {
 @media screen and (max-width: 768px) {
 
     .section_article {
-      flex-direction: column;
+        flex-direction: column;
     }
-    
+
     .article_accueil {
-      flex-basis: 100%;
-      text-align: center;
-      margin-bottom: 20px;
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
     }
-    
+
     .img1,
     .img2,
     .img3 {
-      height: auto;
+        height: auto;
     }
-    
+
     .menu,
     .galerie,
     .ensavoirplus,
     .biographie {
-      margin-top: 20px;
-      margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    
+
     .p1,
     .p2 {
-      font-size: 1.5em;
+        font-size: 1.5em;
     }
-  
-  }
-  /* styles du footer pour les petits écrans */
+
+}
+
+/* styles du footer pour les petits écrans */
 @media (max-width: 767px) {
     footer {
-      padding: 30px 0;
+        padding: 30px 0;
     }
-    
-    .left-section, .center-section, .right-section {
-      display: block;
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
+
+    .left-section,
+    .center-section,
+    .right-section {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
     }
-    
+
     .left-section {
-      padding-bottom: 30px;
+        padding-bottom: 30px;
     }
-    
-    .adresse, .heure, .e_mail {
-      font-size: 1.5em;
+
+    .adresse,
+    .heure,
+    .e_mail {
+        font-size: 1.5em;
     }
-    
+
     .btn {
-      margin-top: 20px;
+        margin-top: 20px;
     }
-    
-    .mention_legales{
-      font-size: 1.5em;
+
+    .mention_legales {
+        font-size: 1.5em;
     }
-    
-    .resaux_sociaux{
-      font-size: 1.5em;
+
+    .resaux_sociaux {
+        font-size: 1.5em;
     }
-  }
-  
+}
