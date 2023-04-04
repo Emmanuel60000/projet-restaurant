@@ -381,7 +381,7 @@ footer {
 }
 
 .btn:hover {
-    background-color: #0069d9;
+    background-color: #0a921c;
 }
 
 .e_mail {
@@ -397,7 +397,7 @@ footer {
 
 .e_mail:hover {
     background-color: #fff;
-    color: #ff2d55;
+    color: #149675;
     border: 2px solid #ff2d55;
     cursor: pointer;
 }
@@ -406,6 +406,10 @@ footer {
     font-size: 2em;
     text-decoration: none;
     color: black;
+}
+
+.mention_legales:hover {
+    color: green;
 }
 
 .resaux_sociaux {
@@ -1120,25 +1124,25 @@ input[type="submit"]:hover {
 
     /* / Styles pour afficher les liens de la navbar lorsque le menu est ouvert / */
     .open .navlinks-container {
-    display: block;
-    transform: translate(0);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    background: black;
-    z-index: 999;
+        display: block;
+        transform: translate(0);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        background: black;
+        z-index: 999;
     }
-    
+
 
     .open .navlinks-container a {
-    color: white;
-    font-size: 1em;
-    padding: 1em;
-    display: block;
-    text-align: center;
+        color: white;
+        font-size: 1em;
+        padding: 1em;
+        display: block;
+        text-align: center;
     }
 
     /* / Style pour le logo / */
