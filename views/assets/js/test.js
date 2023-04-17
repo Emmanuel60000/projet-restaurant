@@ -111,10 +111,22 @@ progressiveTextElements.forEach((element) => {
 });
 
 
+// JS POUR LE DEUXIEME SLIDER
 
+const slide = ["https://images.pexels.com/photos/2544826/pexels-photo-2544826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+, "https://images.pexels.com/photos/5911135/pexels-photo-5911135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+, "https://images.pexels.com/photos/2356059/pexels-photo-2356059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"];
+let numero = 0;
 
-
-
+function ChangeSlide(sens) {
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slide.length - 1;
+    if (numero > slide.length - 1)
+        numero = 0;
+    document.getElementById("slide").src = slide[numero];
+}
+setInterval("ChangeSlide(1)", 5000);
 
 
 

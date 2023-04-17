@@ -7,19 +7,15 @@
     box-sizing: border-box;
 }
 
-
-
 /* STYLE POUR LA NAVBAR */
 
 .main_acceuil {
     background-color: aliceblue;
 }
 
-
-
 /* Style pour la barre de navigation */
 .nav {
-    position: sticky;
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -51,9 +47,14 @@
     height: 2px;
     background: rgb(196, 12, 12);
     position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s 0.15s ease-out;
 }
 
-
+.button span:nth-child(1),
+.button span:nth-child(3) {
+    transition: transform 0.3s ease-out;
+}
 
 /* Style pour la première barre horizontale du bouton de menu */
 .button span:nth-child(1) {
@@ -67,7 +68,7 @@
 
 /* Style pour les barres horizontales du bouton de menu lorsque le menu est ouvert */
 .button.open span:nth-child(1) {
-    transform: translate(0) rotate(45deg);
+    transform: translate(0) rotate(135deg);
 }
 
 /* Style pour la deuxième barre horizontale du bouton de menu lorsque le menu est ouvert */
@@ -79,7 +80,7 @@
 
 /* Style pour la troisième barre horizontale du bouton de menu lorsque le menu est ouvert */
 .button.open span:nth-child(3) {
-    transform: translate(0) rotate(-45deg);
+    transform: translate(0) rotate(-135deg);
 }
 
 /* Style pour les boutons de la barre de navigation */
@@ -140,6 +141,7 @@
     border-right: 1px solid #c5c5c6;
     transform: translate(-100%);
     padding: 15px 50px 15px 20px;
+    transition: transform 0.3s ease-out;
 
 }
 
@@ -149,10 +151,6 @@
 
 }
 
-.button.open span:nth-child(1),
-.button span:nth-child(3) {
-    transition: transform 0 0.15s ease-out;
-}
 
 /* style pour le logo */
 .nav .image {
@@ -614,20 +612,6 @@ input[type="submit"]:hover {
     transition: all 0.2s ease-in-out;
 }
 
-/* .menu-item img:hover {
-    transform: rotate(360deg);
-    transition: all 0.2s ease-in-out;
-  } */
-
-
-/* @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(10px); }
-    50% { transform: translateX(-10px); }
-    75% { transform: translateX(10px); }
-    100% { transform: translateX(0); }
-  } */
-
 
 /* CSS DE LA PAGE BIOGRAPHIE */
 
@@ -947,6 +931,16 @@ input[type="submit"]:hover {
 }
 
 
+
+/* DEUXIEME CAROUSEL POUR LES PETITS ET MOYEN ECRANS */
+#slider {
+    display: none;
+}
+
+
+
+
+
 /* CSS POUR PAGE DE MENU_PRESENTATION */
 
 
@@ -1004,6 +998,8 @@ input[type="submit"]:hover {
     opacity: 1;
 }
 
+
+
 /* css pour le fleche qui permet de remonter en haut du site */
 #bouton-haut {
     display: none;
@@ -1027,7 +1023,7 @@ input[type="submit"]:hover {
 }
 
 
-/* MEDIA QUERIES POUR LA PAGE DES MENUS */
+/* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
 
 /* / Ajuster la largeur des éléments du menu / */
@@ -1079,17 +1075,29 @@ input[type="submit"]:hover {
     }
 }
 
+/* MEDIA QUERIES POUR LA PAGE PRESENTATION MENU */
 
+@media (max-width: 768px) {
+    .container_menu_presentation {
+        flex-direction: column;
+    }
 
-/* / Ajouter un espace supplémentaire entre les éléments du menu / */
-/* .menu-item {
-    margin: 10px;
-    } */
+    .image-overlay {
+        height: 100%;
+        transition: height 0.3s ease-in-out;
+    }
 
-/* / Ajuster la taille de la police de caractères pour la description de l'article */
-/* .menu-item p {
-    font-size: 1rem;
-    } */
+    .overlay-text {
+        font-size: 2rem;
+    }
+}
+
+/* Ajout de règles CSS pour les écrans plus petits que 480px */
+@media (max-width: 480px) {
+    .overlay-text {
+        font-size: 1rem;
+    }
+}
 
 
 /* MEDIA QUERIES POUR LA NAVBAR */
@@ -1097,30 +1105,15 @@ input[type="submit"]:hover {
 @media screen and (max-width: 768px) {
 
     /* Masquer les liens de la navbar et afficher le bouton de menu / */
-    /* .navlinks-container {
-    display: none;
+    .navlinks-container {
+        width: 25%;
+        height: auto;
     }
-    
-    .button {
-    display: flex;
-    } */
 
-    /* / Styles pour le bouton de menu / */
-    /* .button span {
-    background: white;
+    .navlinks-container a {
+        font-size: 2.5vw;
     }
-    
-    .button span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-    }
-    
-    .button span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-    }
-    
-    .button span:nth-child(2) {
-    opacity: 0;
-    } */
+
 
     /* / Styles pour afficher les liens de la navbar lorsque le menu est ouvert / */
     .open .navlinks-container {
@@ -1153,7 +1146,7 @@ input[type="submit"]:hover {
         transform: translateX(-50%);
         text-transform: none;
         margin: auto;
-        width: 6em;
+        width: auto;
         height: 100%;
     }
 
@@ -1303,4 +1296,83 @@ input[type="submit"]:hover {
     .resaux_sociaux {
         font-size: 1.5em;
     }
+}
+
+/* MEDIA QUERIES POUR LA PAGE D'EVENEMENTS */
+
+@media (max-width: 767px) {
+    .container_evenements {
+        display: none;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7 {
+        height: 250px;
+    }
+
+    .h1_evenement {
+        font-size: 32px;
+    }
+}
+
+/* Pour les écrans dont la largeur est comprise entre 768px et 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container_evenements {
+        display: none;
+    }
+
+}
+
+/* MEDIA QUERIES POUR LE DEUXIEME SLIDER */
+@media (max-width: 1024px) {
+    #slider {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+
+    #slide {
+
+        width: 100%;
+        margin: auto;
+        height: 20em;
+    }
+
+    #precedent,
+    #suivant {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 20px;
+        color: rgba(220, 220, 220, 0.8);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+
+    #precedent {
+        left: 0;
+    }
+
+    #suivant {
+        right: 0;
+    }
+
+    #slider:hover #precedent,
+    #slider:hover #suivant {
+        opacity: 1;
+    }
+
 }

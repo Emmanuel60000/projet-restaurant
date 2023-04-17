@@ -1,13 +1,5 @@
 <h1 class="h1_evenement" >EVENEMENTS</h1>
-<div>
-  <p class="p-evenement">Venez découvrir les événements que nous organisons dans notre restaurant tout au long de l'année ! Que ce soit pour
-    fêter un anniversaire, célébrer un mariage ou tout simplement passer une soirée entre amis, notre établissement
-    offre un cadre chaleureux et convivial pour toutes vos occasions spéciales.</p>
-  <p class="p-evenement">Notre carrousel d'événements vous permettra de découvrir en images toutes les soirées inoubliables que nous avons
-    organisées pour nos clients : des repas gastronomiques élaborés par notre chef, des soirées animées avec DJ, des
-    dégustations de vins et bien plus encore ! Vous pourrez également voir comment notre équipe est à l'écoute de vos
-    besoins pour rendre votre événement unique et mémorable.</p>
-</div>
+
 <div class="container_evenements">
   <div class="slider">
     <div class="box1">
@@ -27,6 +19,22 @@
   </div>
 </div>
 <div id="test"></div>
+
+<div id="slider">
+        <img src="https://images.pexels.com/photos/2544826/pexels-photo-2544826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="La forêt de peupliers" id="slide">
+        <div id="precedent" onclick="ChangeSlide(-1)"><</div>
+        <div id="suivant" onclick="ChangeSlide(1)">></div>
+    </div>
+
+
+  <p class="p-evenement">Venez découvrir les événements que nous organisons dans notre restaurant tout au long de l'année ! Que ce soit pour
+    fêter un anniversaire, célébrer un mariage ou tout simplement passer une soirée entre amis, notre établissement
+    offre un cadre chaleureux et convivial pour toutes vos occasions spéciales.</p>
+  <p class="p-evenement">Notre carrousel d'événements vous permettra de découvrir en images toutes les soirées inoubliables que nous avons
+    organisées pour nos clients : des repas gastronomiques élaborés par notre chef, des soirées animées avec DJ, des
+    dégustations de vins et bien plus encore ! Vous pourrez également voir comment notre équipe est à l'écoute de vos
+    besoins pour rendre votre événement unique et mémorable.</p>
+</div>
 <div>
   <p class="p-evenement" >Une fois que vous aurez sélectionné l'événement qui vous plaît, notre équipe se fera un plaisir de travailler avec
     vous pour personnaliser les détails de votre soirée. Nous pouvons adapter nos menus en fonction de vos préférences
