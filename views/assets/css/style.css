@@ -316,11 +316,6 @@
     /* cache la barre de défilement horizontale */
 }
 
-/* style pour les titres h3 */
-/* h3 {
-    text-align: center;
-} */
-
 
 /* css animation pour le texte p1 et p2 de la page d'accueil */
 .progressive-text {
@@ -420,6 +415,7 @@ footer {
     text-align: center;
     font-size: 14px;
     color: #f7ecec;
+    margin-bottom: 0;
 }
 
 
@@ -490,7 +486,8 @@ select,
 input[type="number"],
 textarea,
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border-radius: 3px;
@@ -528,8 +525,27 @@ input[type="submit"]:hover {
     text-align: center;
     margin-bottom: 1em;
 }
-
-
+.p_annuler_reservation{
+    font-size: 2em;
+    color: #b30000;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+.annuler_reservation {
+    display: inline-block;
+    margin-left: 24em;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: red;
+    text-decoration: none; 
+    font-weight: bold; 
+  }
+  .annuler_reservation:hover{
+    color: darkred; 
+    text-decoration: underline; 
+  }
 
 
 /* CSS POUR LA PAGE DE MENU */
@@ -1376,3 +1392,40 @@ input[type="submit"]:hover {
     }
 
 }
+
+/* MEDIA QUERIES POUR LA PAGE RESERVATION */
+
+@media only screen and (max-width: 600px) {
+    form {
+      padding: 10px;
+    }
+    
+    label {
+      font-size: 0.8em;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      font-size: 0.8em;
+    }
+    
+    input[type="submit"] {
+      font-size: 0.8em;
+    }
+    
+    .annuler_reservation {
+      font-size: 0.6em;
+      margin-left: 15em;
+    }
+    
+   .p_reservation {
+      font-size: 1em;
+    }
+    .h1_reservation{
+        font-size: 1.5em;
+    }
+  }

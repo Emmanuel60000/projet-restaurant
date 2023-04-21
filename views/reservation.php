@@ -94,9 +94,7 @@
       <p><?php echo $error["commentaires"]; ?></p>
     <?php } ?>
     <input type="submit" name="Réserver" value="Réserver">
+    <a href="index.php?annuler_reservation" class="annuler_reservation">Annuler une réservation</a>
   </form>
 
 </main>
-</body>
-
-</html>
