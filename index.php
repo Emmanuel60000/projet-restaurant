@@ -77,6 +77,7 @@ if (isset($_GET["Acceuil"])) {
 } elseif (isset($_GET["menu_vins"])) {
     include_once("views/menu_vins.php");
 } elseif (isset($_GET["annuler_reservation"])) {
+    include_once("controllers/clientsCTRL.php");
     include_once("views/annuler_reservation.php");
 
 } else {
