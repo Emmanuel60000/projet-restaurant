@@ -462,7 +462,7 @@ footer {
 /* STYLE POUR LA PAGE DE RESERVATION */
 
 /* style du formulaire */
-form {
+.form_reservation {
     max-width: 40em;
     margin: 0 auto;
     background-color: #ffffff;
@@ -1038,6 +1038,43 @@ input[type="submit"]:hover {
     transform: rotate(-135deg);
 }
 
+ /* CSS POUR TABLEAU D ANNULATION DE RESERVATION */
+
+ table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  
+  /* tr:nth-child(even) {
+    background-color: #f2f2f2;
+  } */
+  
+  .button_tableau_reservation {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .button_tableau_reservation:hover {
+    background-color: #dbc9c8;
+  }
+
 
 /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
@@ -1429,3 +1466,5 @@ input[type="submit"]:hover {
         font-size: 1.5em;
     }
   }
+
+ 

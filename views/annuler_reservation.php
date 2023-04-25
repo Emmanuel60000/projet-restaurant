@@ -8,7 +8,7 @@ Cordialement,
 </p>
 
 
-<form action="" method="post">
+<form class="form_reservation" action="" method="post">
 <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom_clients" required>
     <?php

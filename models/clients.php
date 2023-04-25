@@ -73,12 +73,13 @@ class Clients extends Database {
     }
     public function annuler_reservation(){
 
-        $annuler_reservation = $this->pdo->prepare("SELECT nom_clients,prenom_clients,mail_clients FROM client WHERE nom_clients = ? AND prenom_clients =? AND mail_clients =?");
+        $annuler_reservation = $this->pdo->prepare("SELECT nom_clients,prenom_clients,mail_clients,date_creat_reservation,code_menu,clients.code_clients
+         ,date_reservation,nombredepersonne_reservation,heure_reservation,commentaires FROM clients INNER JOIN reservation ON clients.code_clients=reservation.code_clients WHERE nom_clients = ? AND prenom_clients =? AND mail_clients =?");
         $annuler_reservation->bindValue(1,$this->nom_clients, PDO::PARAM_STR);
         $annuler_reservation->bindValue(2,$this->prenom_clients, PDO::PARAM_STR);
         $annuler_reservation->bindValue(3, $this->mail_clients, PDO::PARAM_STR);
         $annuler_reservation->execute();
-        return $annuler_reservation->fetch(PDO::FETCH_ASSOC);
+        return $annuler_reservation->fetchAll(PDO::FETCH_ASSOC);
     }
     
 }

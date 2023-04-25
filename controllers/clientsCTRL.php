@@ -4,6 +4,7 @@ $message = "";
 $annuler_reservation = new Clients();
 
 if (isset($_POST["annuler_Réservation"])) {
+    // $annuler=null;
     $error = [];
 
     if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
@@ -39,15 +40,28 @@ if (isset($_POST["annuler_Réservation"])) {
     }
 
     if (empty($error)) {
-
+        
         $annuler_reservation->setNom_clients($nom_clients);
         $annuler_reservation->setPrenom_clients($prenom_clients);
         $annuler_reservation->setMail_clients($email);
-        $annuler = $annuler_reservation->annuler_reservation();
+        $annuler_reservation->annuler_reservation();
+        $annuler=$annuler_reservation->annuler_reservation();
+        $_SESSION['donnees'] = $annuler;
+        header("Location:index.php?tableau_reservation");
+        
+        if ($annuler_reservation === true) {
 
-        if ($annuler === true) {
-            header("Location:index.php?");
+            // header("Location:index.php?tableau_reservation");
 
         }
     }
 }
+
+if (isset($_POST["delete"]) && !empty($_POST["delete"])) {
+    $value = $_POST["delete"];
+    
+    
+   
+}
+
+?>

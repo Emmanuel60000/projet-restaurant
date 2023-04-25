@@ -80,7 +80,14 @@ if (isset($_GET["Acceuil"])) {
     include_once("controllers/clientsCTRL.php");
     include_once("views/annuler_reservation.php");
 
-} else {
+}
+ elseif (isset($_GET["tableau_reservation"])) {
+    include_once("controllers/clientsCTRL.php");
+    include_once("views/tableau_reservation.php");
+
+}
+
+else {
     include_once("views/Acceuil.php");
 }
 ?>
