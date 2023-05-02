@@ -83,21 +83,10 @@ class Reservation extends Database
         $insertion->execute();
     }
 
-    // public function recup_reservation()
-    // {
-
-    //     $recup = $this->pdo->prepare("SELECT date_creat_reservation,code_clients,code_menu
-    // ,date_reservation,nombredepersonne_reservation,heure_reservation,commentaires");
-    //     $recup->bindValue(1, $this->date_creat_reservation, PDO::PARAM_INT);
-    //     $recup->bindValue(1, $this->code_clients, PDO::PARAM_INT);
-    //     $recup->bindValue(2, $this->code_menu, PDO::PARAM_INT);
-    //     $recup->bindValue(3, $this->date_reservation, PDO::PARAM_STR);
-    //     $recup->bindValue(4, $this->nombredepersonne_reservation, PDO::PARAM_INT);
-    //     $recup->bindValue(5, $this->heure_reservation, PDO::PARAM_STR);
-    //     $recup->bindValue(6, $this->commentaires, PDO::PARAM_STR);
-    //     $recup_reservation=$recup;
-    //     $recup_reservation->execute();
-    //     return $recup_reservation->fetchAll(PDO::FETCH_ASSOC);
-
-    // }
+    public function delete()
+    {
+        $delete = $this->pdo->prepare("DELETE FROM reservation where code_clients = ? ");
+        $delete->bindValue(1, $this->code_clients, PDO::PARAM_INT);
+        $delete->execute();
+    }
 }

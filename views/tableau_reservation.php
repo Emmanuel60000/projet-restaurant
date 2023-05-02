@@ -1,6 +1,6 @@
 <?php
-if(isset($_SESSION['donnees']) && !empty($_SESSION['donnees']))
-$annuler = $_SESSION['donnees'];
+if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees']))
+    $annuler = $_SESSION['donnees'];
 ?>
 
 <table>

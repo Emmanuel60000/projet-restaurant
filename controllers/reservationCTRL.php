@@ -3,24 +3,15 @@
 $message = "";
 $reservation = new Reservation();
 $clients = new Clients();
-$choixmenu= new Menus();
-$menu=$choixmenu->choix_menu();
+$choixmenu = new Menus();
+$menu = $choixmenu->choix_menu();
 
 
 //Le traitement du formulaire
 if (isset($_POST["Réserver"])) {
     $error = [];
 
-    // if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
-    //     $nom_clients = $_POST["nom_clients"];
-    // } else {
-    //     $error['nom_clients'] = "Le nom_clients est manquant";
-    // }
-    // if (isset($_POST["prenom_clients"]) && !empty($_POST["prenom_clients"])) {
-    //     $prenom_clients = $_POST["prenom_clients"];
-    // } else {
-    //     $error['prenom_clients'] = "Le prenom_clients est manquant";
-    // }
+
     if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
         $nom_clients = $_POST["nom_clients"];
         if (!preg_match("/^[a-zA-Z ]+$/", $nom_clients)) {
@@ -31,7 +22,7 @@ if (isset($_POST["Réserver"])) {
     } else {
         $error['nom_clients'] = "Le nom est manquant";
     }
-    
+
     if (isset($_POST["prenom_clients"]) && !empty($_POST["prenom_clients"])) {
         $prenom_clients = $_POST["prenom_clients"];
         if (!preg_match("/^[a-zA-Z ]+$/", $prenom_clients)) {
@@ -42,7 +33,7 @@ if (isset($_POST["Réserver"])) {
     } else {
         $error['prenom_clients'] = "Le prénom est manquant";
     }
-    
+
     if (isset($_POST["mail_clients"]) && !empty($_POST["mail_clients"])) {
         if (filter_var($_POST["mail_clients"], FILTER_VALIDATE_EMAIL)) {
             $email = $_POST["mail_clients"];
@@ -88,7 +79,7 @@ if (isset($_POST["Réserver"])) {
             $error['date_reservation'] = "Le restaurant est fermé le lundi. Veuillez sélectionner un jour ouvrable.";
         }
     }
-    
+
 
     if (isset($_POST["nombredepersonne_reservation"]) && !empty($_POST["nombredepersonne_reservation"])) {
         $nombredepersonne_reservation = $_POST["nombredepersonne_reservation"];
@@ -108,39 +99,6 @@ if (isset($_POST["Réserver"])) {
 
 
 
-
-    // if (isset($_POST["telephone_clients"]) && !empty($_POST["telephone_clients"])) {
-    //     $telephone_clients = $_POST["telephone_clients"];
-    // } else {
-    //     $error['telephone_clients'] = "La telephone_clients est manquante";
-    // }
-    // if (isset($_POST["date_reservation"]) && !empty($_POST["date_reservation"])) {
-    //     $date_reservation = $_POST["date_reservation"];
-    // } else {
-    //     $error['date_reservation'] = "La date_reservation est manquante";
-    // }
-
-    // if (isset($_POST["heure_reservation"]) && !empty($_POST["heure_reservation"])) {
-    //     $heure_reservation = $_POST["heure_reservation"];
-    // } else {
-    //     $error['heure_reservation'] = "L' heure_reservation est manquante";
-    // }
-    // if (isset($_POST["nombredepersonne_reservation"]) && !empty($_POST["nombredepersonne_reservation"])) {
-    //     $nombredepersonne_reservation = $_POST["nombredepersonne_reservation"];
-    // } else {
-    //     $error['nombredepersonne_reservation'] = "Le nombre de nombredepersonne_reservation est manquante";
-    // }
-    // if (isset($_POST["choix_menu"]) && !empty($_POST["choix_menu"])) {
-    //     $choix_menu = (int)$_POST["choix_menu"];
-    // } else {
-    //     $error['choix_menu'] = "Le choix menu est manquant";
-    // }
-    // if (isset($_POST["commentaires"]) && !empty($_POST["commentaires"])) {
-    //     $commentaires = $_POST["commentaires"];
-    // } else {
-    //     $error['commentaires'] = "Le commentaire est manquant";
-    // }
-
     if (empty($error)) {
 
         $clients->setNom_clients($nom_clients);
@@ -156,8 +114,7 @@ if (isset($_POST["Réserver"])) {
         $user = $clients->verif();
 
         if ($user === false) {
-            echo "pass";
-           
+
             $clients->insert_clients();
             $user = $clients->verif();
             $reservation->setCode_clients($user["code_clients"]);
@@ -167,14 +124,13 @@ if (isset($_POST["Réserver"])) {
         } else {
             $reservation->setCode_clients($user["code_clients"]);
             $reservation->insert_reservation();
-            // if ($user["mail_clients"] === $email) {
-            //     $mailExiste = "le mail n'est pas disponible";
-
-            // }
         }
     }
 }
-
-
-
-
+echo $_SESSION["donnees"];
+if (isset($_POST["delete"])) {
+    $reservation->setCode_clients($_SESSION["donnees"]);
+    $reservation->delete();
+    session_destroy();
+    header("Location:index.php?Acceuil");
+}

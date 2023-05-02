@@ -4,7 +4,7 @@ $message = "";
 $annuler_reservation = new Clients();
 
 if (isset($_POST["annuler_Réservation"])) {
-    // $annuler=null;
+    
     $error = [];
 
     if (isset($_POST["nom_clients"]) && !empty($_POST["nom_clients"])) {
@@ -57,11 +57,7 @@ if (isset($_POST["annuler_Réservation"])) {
     }
 }
 
-if (isset($_POST["delete"]) && !empty($_POST["delete"])) {
-    $value = $_POST["delete"];
-    
-    
-   
-}
+
+
 
 ?>
