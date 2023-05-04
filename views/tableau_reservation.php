@@ -1,6 +1,6 @@
 <?php
-if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees']))
-    $annuler = $_SESSION['donnees'];
+if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees'])){
+    // $annuler = $_SESSION['donnees'];
 ?>
 
 <table>
@@ -62,3 +62,8 @@ if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees']))
         </tr>
     <?php  } ?>
 </table>
+<?php 
+}else{
+    session_destroy();
+    header("Location:index.php?Acceuil");
+}

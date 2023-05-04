@@ -82,8 +82,8 @@ if (isset($_GET["Acceuil"])) {
 
 }
  elseif (isset($_GET["tableau_reservation"])) {
-    include_once("controllers/clientsCTRL.php");
-    include_once("controllers/reservationCTRL.php");
+    include_once("controllers/tableau_reservationCTRL.php");
+    // include_once("controllers/reservationCTRL.php");
     include_once("views/tableau_reservation.php");
 
 }

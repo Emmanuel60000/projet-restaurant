@@ -44,8 +44,7 @@ if (isset($_POST["annuler_Réservation"])) {
         $annuler_reservation->setNom_clients($nom_clients);
         $annuler_reservation->setPrenom_clients($prenom_clients);
         $annuler_reservation->setMail_clients($email);
-        $annuler_reservation->annuler_reservation();
-        $annuler=$annuler_reservation->annuler_reservation();
+        $annuler=$annuler_reservation->connexion();
         $_SESSION['donnees'] = $annuler;
         header("Location:index.php?tableau_reservation");
         

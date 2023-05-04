@@ -85,8 +85,9 @@ class Reservation extends Database
 
     public function delete()
     {
-        $delete = $this->pdo->prepare("DELETE FROM reservation where code_clients = ? ");
-        $delete->bindValue(1, $this->code_clients, PDO::PARAM_INT);
+        $delete = $this->pdo->prepare("DELETE FROM reservation where date_creat_reservation = ? ");
+        $delete->bindValue(1, $this->date_creat_reservation, PDO::PARAM_STR);
         $delete->execute();
     }
+    
 }

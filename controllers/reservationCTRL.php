@@ -127,10 +127,4 @@ if (isset($_POST["Réserver"])) {
         }
     }
 }
-echo $_SESSION["donnees"];
-if (isset($_POST["delete"])) {
-    $reservation->setCode_clients($_SESSION["donnees"]);
-    $reservation->delete();
-    session_destroy();
-    header("Location:index.php?Acceuil");
-}
+
