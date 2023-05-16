@@ -124,6 +124,7 @@ if (isset($_POST["Réserver"])) {
         } else {
             $reservation->setCode_clients($user["code_clients"]);
             $reservation->insert_reservation();
+            header("Location:index.php?Acceuil");
         }
     }
 }

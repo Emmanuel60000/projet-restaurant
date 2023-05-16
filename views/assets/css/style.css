@@ -525,13 +525,15 @@ input[type="submit"]:hover {
     text-align: center;
     margin-bottom: 1em;
 }
-.p_annuler_reservation{
+
+.p_annuler_reservation {
     font-size: 2em;
     color: #b30000;
     text-align: center;
     margin-bottom: 1em;
     margin-top: 1em;
 }
+
 .annuler_reservation {
     display: inline-block;
     margin-left: 24em;
@@ -539,13 +541,14 @@ input[type="submit"]:hover {
     text-decoration: underline;
     cursor: pointer;
     color: red;
-    text-decoration: none; 
-    font-weight: bold; 
-  }
-  .annuler_reservation:hover{
-    color: darkred; 
-    text-decoration: underline; 
-  }
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.annuler_reservation:hover {
+    color: darkred;
+    text-decoration: underline;
+}
 
 
 /* CSS POUR LA PAGE DE MENU */
@@ -1038,43 +1041,56 @@ input[type="submit"]:hover {
     transform: rotate(-135deg);
 }
 
- /* CSS POUR TABLEAU D ANNULATION DE RESERVATION */
+/* CSS POUR TABLEAU D ANNULATION DE RESERVATION */
 
- table {
+.h1_annuler_reservation{
+    text-align: center;
+    color: #b30000;
+    margin: 0.5em 0 0.5em 0;
+}
+.p_annuler_une_reservation{
+    text-align: center;
+    font-size: 20px;
+}
+
+table {
     border-collapse: collapse;
     width: 100%;
     border: 1px solid black;
-  }
-  
-  th, td {
+    margin-top: 1em;
+}
+
+th,
+td {
     text-align: center;
     padding: 8px;
     border: 1px solid black;
-  }
-  
-  th {
+}
+
+th {
     background-color: #4CAF50;
     color: white;
-  }
+}
 
-  
-  /* tr:nth-child(even) {
-    background-color: #f2f2f2;
-  } */
-  
-  .button_tableau_reservation {
+
+.button_tableau_reservation {
     background-color: #f44336;
     color: white;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
     text-align: center;
-  }
-  
-  .button_tableau_reservation:hover {
-    background-color: #dbc9c8;
-  }
+}
 
+.button_tableau_reservation:hover {
+    background-color: #dbc9c8;
+}
+
+#deco {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2.5em;
+}
 
 /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
@@ -1325,7 +1341,6 @@ input[type="submit"]:hover {
         display: block;
         width: 100%;
         text-align: center;
-        /* margin-bottom: 5px; */
     }
 
     .left-section {
@@ -1434,37 +1449,76 @@ input[type="submit"]:hover {
 
 @media only screen and (max-width: 600px) {
     form {
-      padding: 10px;
+        padding: 10px;
     }
-    
+
     label {
-      font-size: 0.8em;
+        font-size: 0.8em;
     }
-    
+
     input[type="text"],
     input[type="email"],
     input[type="tel"],
     input[type="number"],
     select,
     textarea {
-      font-size: 0.8em;
+        font-size: 0.8em;
     }
-    
+
     input[type="submit"] {
-      font-size: 0.8em;
+        font-size: 0.8em;
     }
-    
+
     .annuler_reservation {
-      font-size: 0.6em;
-      margin-left: 15em;
+        font-size: 0.6em;
+        margin-left: 15em;
     }
-    
-   .p_reservation {
-      font-size: 1em;
+
+    .p_reservation {
+        font-size: 1em;
     }
-    .h1_reservation{
+
+    .h1_reservation {
         font-size: 1.5em;
     }
+}
+
+.h1_membres{
+    text-align: center;
+    color: #b30000;
+    margin: 1em 0 1em 0;
+    font-size: 3em;
+}
+.p_membres{
+    text-align: center;
+    color: #0a921c;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.membre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
- 
+  .membre-image {
+    width: 50%;
+    height: auto;
+  }
+
+  .membre-bio {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2.align-top {
+   margin-bottom: 100px;
+    align-items: center;
+    color: #b30000;
+   
+  }
+ .p_membre{
+    font-size: 1.5em;
+ }
