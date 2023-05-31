@@ -52,5 +52,15 @@ class Menus extends Database{
         return $choix_menu->fetchAll(PDO::FETCH_ASSOC);
     }
    
-
+    public function ajouterMenu()
+    {
+        $ajouterMenu = $this->pdo->prepare("INSERT INTO menus ( nom_menu, type_menu, description_menu, prix_menu)
+      VALUES(?,?,?,?) ");
+        
+        $ajouterMenu->bindValue(1, $this->nom_menu, PDO::PARAM_STR);
+        $ajouterMenu->bindValue(2, $this->type_menu, PDO::PARAM_STR);
+        $ajouterMenu->bindValue(3, $this->description_menu, PDO::PARAM_STR);
+        $ajouterMenu->bindValue(4, $this->prix_menu, PDO::PARAM_INT);
+        $ajouterMenu->execute();
+    }
 }

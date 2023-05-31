@@ -29,4 +29,15 @@ class Produits extends Database{
     {
         return $this->prix_produits = $prix_produits;
     }
+
+    public function ajouterProduits()
+    {
+        $ajouterProduits = $this->pdo->prepare("INSERT INTO produits ( nom_produits, prix_produits)
+      VALUES(?,?) ");
+        
+        $ajouterProduits->bindValue(1, $this->nom_produits, PDO::PARAM_STR);
+        $ajouterProduits->bindValue(2, $this->prix_produits, PDO::PARAM_STR);
+        $ajouterProduits->execute();
+    }
+
 }

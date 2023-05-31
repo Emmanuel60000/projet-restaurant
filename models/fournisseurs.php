@@ -39,4 +39,15 @@ class Fournisseurs extends Database{
         return $this->telephone_fournisseurs = $telephone_fournisseurs;
     }
 
+ public function ajouterFournisseurs()
+    {
+        $ajouterfournisseurs = $this->pdo->prepare("INSERT INTO fournisseurs ( nom_fournisseurs, adresse_fournisseurs, telephone_fournisseurs)
+      VALUES(?,?,?) ");
+        
+        $ajouterfournisseurs->bindValue(1, $this->nom_fournisseurs, PDO::PARAM_STR);
+        $ajouterfournisseurs->bindValue(2, $this->adresse_fournisseurs, PDO::PARAM_STR);
+        $ajouterfournisseurs->bindValue(3, $this->telephone_fournisseurs, PDO::PARAM_STR);
+        $ajouterfournisseurs->execute();
+    }
+
 }

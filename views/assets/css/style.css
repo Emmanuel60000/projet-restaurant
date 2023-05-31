@@ -1091,6 +1091,95 @@ th {
     justify-content: flex-end;
     margin: 2.5em;
 }
+/* CSS POUR LA PAGE A PROPOS */
+.h1_membres{
+    text-align: center;
+    color: #b30000;
+    margin: 1em 0 1em 0;
+    font-size: 3em;
+}
+.p_membres{
+    text-align: center;
+    color: #0a921c;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.membre-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .membre-image {
+    width: 50%;
+    height:50rem;
+  }
+
+  .membre-bio {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2.align-top {
+   margin-bottom: 100px;
+    align-items: center;
+    color: #b30000;
+   
+  }
+ .p_membre{
+    font-size: 1.5em;
+ }
+
+ /* CSS POUR LA PAGE ADMIN */
+
+ .h1_admin {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h2_ajouter_menu {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form_admin {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.label_admin {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input_admin{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input_admin_submit {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input_admin_submit:hover {
+    background-color: #45a049;
+}
 
 /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
@@ -1483,42 +1572,3 @@ th {
     }
 }
 
-.h1_membres{
-    text-align: center;
-    color: #b30000;
-    margin: 1em 0 1em 0;
-    font-size: 3em;
-}
-.p_membres{
-    text-align: center;
-    color: #0a921c;
-    font-size: 2em;
-    margin-bottom: 1em;
-}
-.membre-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .membre-image {
-    width: 50%;
-    height: auto;
-  }
-
-  .membre-bio {
-    width: 50%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h2.align-top {
-   margin-bottom: 100px;
-    align-items: center;
-    color: #b30000;
-   
-  }
- .p_membre{
-    font-size: 1.5em;
- }

@@ -39,4 +39,14 @@ class Livrer extends Database{
     {
         return $this->quantite_livraison = $quantite_livraison;
     }
+
+    public function ajouterLivraison()
+    {
+        $ajouterLivraison = $this->pdo->prepare("INSERT INTO livrer ( date_livraison, quantite_livraison)
+      VALUES(?,?) ");
+        
+        $ajouterLivraison->bindValue(1, $this->date_livraison, PDO::PARAM_STR);
+        $ajouterLivraison->bindValue(2, $this->quantite_livraison, PDO::PARAM_STR);
+        $ajouterLivraison->execute();
+    }
 }

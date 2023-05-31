@@ -6,8 +6,9 @@ include("models/reservation.php");
 include("models/menus.php");
 include("models/clients.php");
 include("models/roles.php");
-
-
+include("models/fournisseurs.php");
+include("models/livrer.php");
+include("models/produits.php");
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +38,7 @@ include("models/roles.php");
         </div>
         <div class="navlinks-container">
             <a href="index.php?Acceuil">Accueil</a>
+            <a href="index.php?a_propos">A Propos</a>
             <a href="index.php?menu_presentation">Menu</a>
             <a href="index.php?biographie">Biographie</a>
             <a href="index.php?evenements">Evénements</a>
@@ -86,7 +88,10 @@ if (isset($_GET["Acceuil"])) {
     include_once("views/tableau_reservation.php");
 }elseif (isset($_GET["a_propos"])) {  
     include_once("views/a_propos.php");    
-} else {
+} elseif (isset($_GET["admin"])) {
+    include_once("controllers/adminCTRL.php");  
+    include_once("views/admin.php");    
+}else {
     include_once("views/Acceuil.php");
 }
 ?>
