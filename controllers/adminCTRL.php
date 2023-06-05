@@ -1,6 +1,6 @@
 <?php
 
-$ajouterMenu=new Menus();
+$ajouterMenu = new Menus();
 
 if (isset($_POST['ajouterMenu'])) {
     $erreur = [];
@@ -20,23 +20,38 @@ if (isset($_POST['ajouterMenu'])) {
         $erreur['description_menu'] = "Erreur description_menu vide";
     }
     if (isset($_POST['prix_menu']) && !empty($_POST['prix_menu'])) {
-        $prix_menu =  $_POST['prix_menu'];
+        if (strpos($_POST['prix_menu'], '€') !== false || $_POST['prix_menu'] === 'EUR') {
+            $prix_menu = $_POST['prix_menu'];
+        } else {
+            $erreur['prix_menu'] = "Le prix doit être en euro (€)";
+        }
     } else {
         $erreur['prix_menu'] = "Erreur prix_menu vide";
     }
-    if (empty($erreur)) {
+    if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $image_tmp = $_FILES['image']['tmp_name'];
+        $image_name = $_FILES['image']['name'];
+        $image_path = "views/assets/img/" . $image_name; 
 
-        $ajouterMenu->setType_menu($type_menu);
-        $ajouterMenu->setNom_menu($nom_menu);
-        $ajouterMenu->setDescription_menu($description_menu);
-        $ajouterMenu->setPrix_menu($prix_menu);
-
-        $ajouterMenu->ajouterMenu();
-
-        
+        // Déplacer l'image vers le dossier de destination
+        if (move_uploaded_file($image_tmp, $image_path)) {
+            $ajouterMenu->setPhoto_menu($image_path);
+        } else {
+            $erreur['image'] = "Erreur lors du téléchargement de l'image";
+        }
     }
+        if (empty($erreur)) {
+
+            $ajouterMenu->setType_menu($type_menu);
+            $ajouterMenu->setNom_menu($nom_menu);
+            $ajouterMenu->setDescription_menu($description_menu);
+            $ajouterMenu->setPrix_menu($prix_menu);
+           
+            $ajouterMenu->ajouterMenu();
+        }
+    
 }
-$ajouterfournisseurs=new Fournisseurs();
+$ajouterfournisseurs = new Fournisseurs();
 
 if (isset($_POST['ajouterFournisseurs'])) {
     $erreur = [];
@@ -63,8 +78,8 @@ if (isset($_POST['ajouterFournisseurs'])) {
     }
 }
 
-$ajouterLivraison= new Livrer();
-$ajouterProduits=new Produits();
+$ajouterLivraison = new Livrer();
+$ajouterProduits = new Produits();
 if (isset($_POST['ajouterLivraison'])) {
     $erreur = [];
     if (isset($_POST['nom_produits']) && !empty($_POST['nom_produits'])) {
@@ -87,7 +102,7 @@ if (isset($_POST['ajouterLivraison'])) {
     } else {
         $erreur['prix_produits'] = "Erreur prix_produits vide";
     }
-    if (empty($erreur)) { 
+    if (empty($erreur)) {
         $ajouterProduits->setNom_produits($nom_produits);
         $ajouterProduits->setPrix_produits($prix_produits);
         $ajouterProduits->ajouterProduits();
@@ -95,5 +110,8 @@ if (isset($_POST['ajouterLivraison'])) {
         $ajouterLivraison->setQuantite_livraison($quantite_livraison);
         $ajouterLivraison->ajouterLivraison();
     }
-
+}
+if (isset($_POST["deconnexion"])) {
+    session_destroy();
+    header("Location:index.php?Acceuil");
 }

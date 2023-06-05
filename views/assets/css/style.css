@@ -619,13 +619,7 @@ input[type="submit"]:hover {
     text-align: center;
 }
 
-/* menu-item {
-    position: relative;
-  } */
 
-/* .menu-item:hover  {
-    animation: shake 0.8s;
-  } */
 .menu-item:hover {
     transform: scale(1.10);
     transition: all 0.2s ease-in-out;

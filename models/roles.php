@@ -2,16 +2,16 @@
 
 class Roles extends Database
 {
-    private $id;
+    private $code;
     private $nom;
 
-    public function getId()
+    public function getCode()
     {
-        return $this->id;
+        return $this->code;
     }
-    public function setId($id)
+    public function setCode($code)
     {
-        return $this->id = $id;
+        return $this->code = $code;
     }
     public function getNom()
     {
@@ -21,4 +21,6 @@ class Roles extends Database
     {
         return $this->nom = $nom;
     }
- }
+   
+    }
+ 

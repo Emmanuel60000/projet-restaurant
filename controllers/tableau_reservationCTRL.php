@@ -1,7 +1,7 @@
 <?php
+ 
 
-
-if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees'])) {
+if (isset($_SESSION['donnees']) && !empty($_SESSION['donnees']) && $_SESSION['donnees'][0]["code_roles"]==2) {
     $reservation = new Clients();
     $reservation->setNom_clients($_SESSION['donnees'][0]["nom_clients"]);
     $reservation->setPrenom_clients($_SESSION['donnees'][0]["prenom_clients"]);
@@ -25,3 +25,4 @@ if (isset($_POST["deconnexion"])) {
     session_destroy();
     header("Location:index.php?Acceuil");
 }
+

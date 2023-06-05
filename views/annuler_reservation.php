@@ -27,14 +27,9 @@ Cordialement,
     if (isset($error["mail_clients"])) { ?>
       <p><?php echo $error["mail_clients"]; ?></p>
     <?php } ?>
-    <!-- <label for="motdepasse">Mot de passe :</label>
-    <input type="password"  name="motdepasse_clients" required> -->
-    <?php
-   /* if (isset($error["motdepasse_clients"])) { ?>
-      <p><?php echo $error["motdepasse_clients"]; ?></p>
-    <?php } */?>
+  
     
     <input type="submit" name="annuler_Réservation" value="Connexion">
     </form>
 
-   
+    

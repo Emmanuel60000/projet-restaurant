@@ -7,7 +7,7 @@ class Clients extends Database {
     private $mail_clients;
     private $telephone_clients;
   
-    
+    private $code_roles;
 
     public function getCode_clients()
     {
@@ -49,7 +49,14 @@ class Clients extends Database {
     {
         return $this->telephone_clients = $telephone_clients;
     }
-    
+    public function getCode_roles()
+    {
+        return $this->code_roles;
+    }
+    public function setCode_roles($code_roles)
+    {
+        return $this->code_roles = $code_roles;
+    }
 
     public function insert_clients()
     {
@@ -73,7 +80,7 @@ class Clients extends Database {
     }
     public function connexion(){
 
-        $annuler_reservation = $this->pdo->prepare("SELECT nom_clients,prenom_clients,mail_clients FROM clients  WHERE nom_clients = ? AND prenom_clients =? AND mail_clients =?");
+        $annuler_reservation = $this->pdo->prepare("SELECT nom_clients,prenom_clients,mail_clients,code_roles FROM clients  WHERE nom_clients = ? AND prenom_clients =? AND mail_clients =?");
         $annuler_reservation->bindValue(1,$this->nom_clients, PDO::PARAM_STR);
         $annuler_reservation->bindValue(2,$this->prenom_clients, PDO::PARAM_STR);
         $annuler_reservation->bindValue(3, $this->mail_clients, PDO::PARAM_STR);
@@ -90,4 +97,13 @@ class Clients extends Database {
         $annuler_reservation->execute();
         return $annuler_reservation->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // public function verif_roles(){
+
+    //     $verif_roles = $this->pdo->prepare("SELECT nom_clients,prenom_clients,mail_clients FROM clients where code_roles = ? ");
+    //     $verif_roles ->bindValue(1,$this->code_roles, PDO::PARAM_INT);
+    //     $verif_roles->execute();
+    //     return $verif_roles->fetch(PDO::FETCH_ASSOC);
+      
+    // }
 }

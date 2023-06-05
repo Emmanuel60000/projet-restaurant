@@ -45,14 +45,15 @@ if (isset($_POST["annuler_Réservation"])) {
         $annuler_reservation->setPrenom_clients($prenom_clients);
         $annuler_reservation->setMail_clients($email);
         $annuler=$annuler_reservation->connexion();
-        $_SESSION['donnees'] = $annuler;
-        header("Location:index.php?tableau_reservation");
         
-        if ($annuler_reservation === true) {
-
-            // header("Location:index.php?tableau_reservation");
-
+        $_SESSION['donnees'] = $annuler;
+        
+        if(isset($_SESSION['donnees']) && !empty($_SESSION['donnees']) && $_SESSION['donnees'][0]["code_roles"]==1){ 
+            header("Location:index.php?admin");
+        }else{
+            header("Location:index.php?tableau_reservation");
         }
+       
     }
 }
 
