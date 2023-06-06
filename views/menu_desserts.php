@@ -13,7 +13,7 @@ $dessertsList = $menu_desserts->menu_desserts()
       <img src="<?php echo $valeur["photo_menu"] ?>">
       <h3><?php echo $valeur["nom_menu"] ?></h3>
       <p><?php echo $valeur["description_menu"] ?></p>
-      <span class="price"><?php echo $valeur["prix_menu"] ?></span>
+      <span class="price"><?php echo $valeur["prix_menu"] ?>€</span>
     
   </div>
   <?php  } ?>

@@ -95,4 +95,10 @@ class Menus extends Database
         $choix_menu = $this->pdo->query("SELECT * FROM menus WHERE type_menu='vins'");
         return $choix_menu->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function supprimerMenu()
+    {
+        $supprimerMenu = $this->pdo->prepare("DELETE FROM menus WHERE code_menu = ?");
+        $supprimerMenu->bindValue(1, $this->code_menu, PDO::PARAM_INT);
+        $supprimerMenu->execute();
+    }
 }

@@ -73,6 +73,7 @@ if (isset($_GET["Acceuil"])) {
 } elseif (isset($_GET["menu_presentation"])) {
     include_once("views/menu_presentation.php");
 } elseif (isset($_GET["menu_entrees"])) {
+    include_once("controllers/menusCTRL.php");
     include_once("views/menu_entrees.php");
 } elseif (isset($_GET["menu_plats"])) {
     include_once("views/menu_plats.php");

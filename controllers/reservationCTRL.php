@@ -126,6 +126,14 @@ if (isset($_POST["Réserver"])) {
             $reservation->insert_reservation();
             header("Location:index.php?Acceuil");
         }
+        // elseif {
+        //     if ($user["email"] === $email) {
+        //         $emailExiste = "le mail n'est pas dispo";
+        //     }
+        //     if ($user["pseudo"] === $pseudo) {
+        //         $pseudoExiste = "le pseudo n'est pas dispo";
+        //     }
+        // }
     }
 }
 
