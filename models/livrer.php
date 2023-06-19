@@ -42,11 +42,12 @@ class Livrer extends Database{
 
     public function ajouterLivraison()
     {
-        $ajouterLivraison = $this->pdo->prepare("INSERT INTO livrer ( date_livraison, quantite_livraison)
-      VALUES(?,?) ");
-        
-        $ajouterLivraison->bindValue(1, $this->date_livraison, PDO::PARAM_STR);
-        $ajouterLivraison->bindValue(2, $this->quantite_livraison, PDO::PARAM_STR);
+        $ajouterLivraison = $this->pdo->prepare("INSERT INTO livrer (code_produits,code_fournisseurs,date_livraison,quantite_livraison)
+      VALUES(?,?,?,?) ");
+        $ajouterLivraison->bindValue(1, $this->code_produits, PDO::PARAM_INT);
+        $ajouterLivraison->bindValue(2, $this->code_fournisseurs, PDO::PARAM_INT);
+        $ajouterLivraison->bindValue(3, $this->date_livraison, PDO::PARAM_STR);
+        $ajouterLivraison->bindValue(4, $this->quantite_livraison, PDO::PARAM_STR);
         $ajouterLivraison->execute();
     }
 }

@@ -76,10 +76,13 @@ if (isset($_GET["Acceuil"])) {
     include_once("controllers/menusCTRL.php");
     include_once("views/menu_entrees.php");
 } elseif (isset($_GET["menu_plats"])) {
+    include_once("controllers/menusCTRL.php");
     include_once("views/menu_plats.php");
 } elseif (isset($_GET["menu_desserts"])) {
+    include_once("controllers/menusCTRL.php");
     include_once("views/menu_desserts.php");
 } elseif (isset($_GET["menu_vins"])) {
+    include_once("controllers/menusCTRL.php");
     include_once("views/menu_vins.php");
 } elseif (isset($_GET["annuler_reservation"])) {
     include_once("controllers/clientsCTRL.php");

@@ -1175,6 +1175,9 @@ th {
     background-color: #45a049;
 }
 
+p{
+    color: #b30000;
+}
 /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
 
@@ -1324,7 +1327,7 @@ th {
     }
 }
 
-/* media querie pour la page d'acceuil */
+/* media queries pour la page d'acceuil */
 
 
 @media (max-width: 768px) {
@@ -1566,3 +1569,56 @@ th {
     }
 }
 
+/* media queries page a propos */
+
+/* Media query pour les petits écrans */
+@media (max-width: 500px) {
+    .membre-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .membre-image {
+      width: 100%;
+      order: -1; /* Placer l'image avant le texte */
+    }
+    
+    .membre-bio {
+      width: 100%;
+      text-align: center;
+      margin-top: 1em;
+    }
+    
+    .h1_membres {
+      font-size: 2em;
+    }
+    
+    .p_membres {
+      font-size: 1.5em;
+    }
+    
+    h2.align-top {
+      margin-bottom: 0.5em;
+    }
+    
+    .p_membre {
+      font-size: 1.2em;
+    }
+  }
+  
+
+  /* Media queries pour les écrans moyens */
+  @media (min-width: 500px) and (max-width: 900px) {
+    .membre-container {
+      flex-direction: column;
+    }
+    
+    .membre-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    .membre-bio {
+      width: 100%;
+    }
+  }
