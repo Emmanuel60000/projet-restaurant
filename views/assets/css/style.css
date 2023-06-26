@@ -137,7 +137,7 @@
     background: #fafafa;
     top: 100%;
     left: 0;
-    height: 60vh;
+    height: 65vh;
     border-right: 1px solid #c5c5c6;
     transform: translate(-100%);
     padding: 15px 50px 15px 20px;
@@ -598,7 +598,7 @@ input[type="submit"]:hover {
 }
 
 /* Style pour le titre de l'article */
-.menu-item h3 {
+.menu_h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     text-align: center;
@@ -1037,12 +1037,13 @@ input[type="submit"]:hover {
 
 /* CSS POUR TABLEAU D ANNULATION DE RESERVATION */
 
-.h1_annuler_reservation{
+.h1_annuler_reservation {
     text-align: center;
     color: #b30000;
     margin: 0.5em 0 0.5em 0;
 }
-.p_annuler_une_reservation{
+
+.p_annuler_une_reservation {
     text-align: center;
     font-size: 20px;
 }
@@ -1085,50 +1086,54 @@ th {
     justify-content: flex-end;
     margin: 2.5em;
 }
+
 /* CSS POUR LA PAGE A PROPOS */
-.h1_membres{
+.h1_membres {
     text-align: center;
     color: #b30000;
     margin: 1em 0 1em 0;
     font-size: 3em;
 }
-.p_membres{
+
+.p_membres {
     text-align: center;
     color: #0a921c;
     font-size: 2em;
     margin-bottom: 1em;
 }
+
 .membre-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
+}
 
-  .membre-image {
+.membre-image {
     width: 50%;
-    height:50rem;
-  }
+    height: 50rem;
+}
 
-  .membre-bio {
+.membre-bio {
     width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  h2.align-top {
-   margin-bottom: 100px;
+h2.align-top {
+    margin-bottom: 100px;
     align-items: center;
     color: #b30000;
-   
-  }
- .p_membre{
+
+}
+
+.p_membre {
     font-size: 1.5em;
- }
+}
 
- /* CSS POUR LA PAGE ADMIN */
+/* CSS POUR LA PAGE ADMIN */
 
- .h1_admin {
+.h1_admin {
     text-align: center;
     margin-top: 20px;
 }
@@ -1152,7 +1157,7 @@ th {
     margin-bottom: 5px;
 }
 
-.input_admin{
+.input_admin {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -1175,89 +1180,272 @@ th {
     background-color: #45a049;
 }
 
-p{
+p {
     color: #b30000;
 }
-/* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
 
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+
+/* MEDIA QUERIES POUR LES ECRANS COMPRIS ENTRE 500PX ET 1000PX */
 
 /* / Ajuster la largeur des éléments du menu / */
-@media only screen and (min-width: 550px) and (max-width: 850px) {
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
 
-    /* Ajouter un espace supplémentaire en haut de la page */
+    /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
+
     .menu-h1 {
-        font-size: 2.5rem;
-        margin-top: 10px;
-    }
-
-    /* Ajouter un espace supplémentaire entre les sections */
-    .menu-h2 {
         font-size: 2rem;
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
-    /* Style des articles du menu */
+    .menu-h2 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .center-container {
+        align-items: center;
+     }
+
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     .menu-item {
-        display: inline-block;
-        width: 45%;
-        margin: 10px;
-        height: 30em;
+        width: calc(45% - 10px); /* 20px est la marge entre deux éléments */
+        margin-bottom: 20px;
+        padding: 15px;
+        height: 25em;
+        background-color: #ffffff;
+        box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
         align-items: center;
     }
 
+    .menu-item img {
+        width: 15em;
+        height: 12em;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    .menu_h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .menu-item .price {
+        font-size: 1.3rem;
+        text-align: center;
+        color: #b30000;
+        font-weight: bold;
+    }
+    .body_menu{
+      overflow-x: hidden;
+    }
+
+    /* media queries pour la page d'acceuil */
+    .h1 {
+        top: 20%;
+        /* nouvelle position verticale pour h1 */
+        font-size: 4em;
+        /* réduction de la taille de police pour h1 */
+    }
+
+    .h2 {
+        top: 40%;
+        /* nouvelle position verticale pour h2 */
+        font-size: 3em;
+        /* réduction de la taille de police pour h2 */
+    }
+
+
+    /* media queries pour la galerie */
+
+    /* élément qui contient l'ensemble de la galerie */
+    .gallery {
+        margin-top: 30px;
+    }
+
+    /* contient les vignettes (miniatures) de chaque image dans la galerie. */
+    .thumbnails {
+        gap: 5px;
+    }
+
+    /* Cette classe est appliquée à l'image principal qui représente une vignette */
+    .thumbnails img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Cette classe est appliquée à l'élément img qui représente l'image agrandie */
+    .preview img {
+        width: 50em;
+        height: 25em;
+        margin-bottom: 1em;
+    }
+
+    /* Titre de la section */
+    .h2_gallerie {
+        font-size: 1.5em;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* Paragraphe principal */
+    .p_gallerie {
+        font-size: 1em;
+    }
+
+
+    /* MEDIA QUERIES POUR LA PAGE D'EVENEMENTS */
+    .container_evenements {
+        display: none;
+    }
+
+
+    /* MEDIA QUERIES POUR LE DEUXIEME SLIDER */
+
+    #slider {
+        position: relative;
+        max-width: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        height: auto;
+    }
+
+    #slide {
+
+        width: 100%;
+        margin: auto;
+        height: 20em;
+    }
+
+    #precedent,
+    #suivant {
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        position: absolute;
+        font-size: 20px;
+        color: rgba(220, 220, 220, 0.8);
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+    }
+
+    #precedent {
+        left: 0;
+    }
+
+    #suivant {
+        right: 0;
+    }
+
+    #slider:hover #precedent,
+    #slider:hover #suivant {
+        opacity: 1;
+    }
+
+    /* media queries page a propos */
+
+    .membre-container {
+        flex-direction: column;
+    }
+
+    .membre-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .membre-bio {
+        width: 100%;
+    }
 }
 
 
 
-/* / Ajuster la taille des images / */
-@media screen and (max-width: 576px) {
+
+
+/* MEDIA QUERIES POUR LES ECRANS DE MAX 500PX */
+
+
+@media screen and (max-width: 500px) {
+
+    /* MEDIA QUERIES POUR LA PAGE DES MENUS  ENTREES PLATS DESSERTS VINS*/
+
     .menu-item img {
-        width: 80%;
+        width: 60%;
         height: auto;
     }
 
     .menu-item {
         height: auto;
-        width: auto;
+        width: 20em;
     }
 
     .menu-h1 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .menu-h2 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
-}
+    .menu_h3 {
+        font-size: 0.9em;
+      }
 
-/* MEDIA QUERIES POUR LA PAGE PRESENTATION MENU */
+    .menu-item p{
+        font-size: 0.8em;
+    }
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+    /* MEDIA QUERIES POUR LA PAGE PRESENTATION MENU */
 
-@media (max-width: 768px) {
     .container_menu_presentation {
         flex-direction: column;
     }
 
-    .image-overlay {
-        height: 100%;
-        transition: height 0.3s ease-in-out;
+    .image_presentation {
+        height: 10em;
     }
 
     .overlay-text {
         font-size: 2rem;
     }
-}
 
-/* Ajout de règles CSS pour les écrans plus petits que 480px */
-@media (max-width: 480px) {
-    .overlay-text {
-        font-size: 1rem;
+
+
+    /* MEDIA QUERIES POUR LA NAVBAR */
+
+    /* / Style pour les petits écrans (max-width: 500px) / */
+    /* / Style pour le logo */
+    .nav .image {
+        width: 4em;
     }
-}
-
-
-/* MEDIA QUERIES POUR LA NAVBAR */
-
-@media screen and (max-width: 768px) {
 
     /* Masquer les liens de la navbar et afficher le bouton de menu / */
     .navlinks-container {
@@ -1311,79 +1499,67 @@ p{
         top: 3em;
         right: 1%;
     }
-}
-
-/* / Style pour les petits écrans (max-width: 576px) / */
-@media screen and (max-width: 576px) {
-
-    /* / Style pour les liens de la navbar / */
-    /* .navlinks-container a {
-    font-size: 1.2em;
-    } */
-
-    /* / Style pour le logo */
-    .nav .image {
-        width: 4em;
-    }
-}
-
-/* media queries pour la page d'acceuil */
 
 
-@media (max-width: 768px) {
+    /* media queries pour la page d'acceuil */
 
-    /* règles pour les écrans de taille inférieure à 768px */
+    /* règles pour les écrans de taille inférieure à 500px */
     .h1 {
         top: 40%;
         /* nouvelle position verticale pour h1 */
-        font-size: 4em;
+        font-size: 3em;
         /* réduction de la taille de police pour h1 */
     }
+    
 
     .h2 {
         top: 70%;
         /* nouvelle position verticale pour h2 */
-        font-size: 3em;
+        font-size: 2em;
         /* réduction de la taille de police pour h2 */
     }
-}
 
-/* media queries pour la galerie */
+    /* media queries pour la galerie */
 
-@media only screen and (max-width: 768px) {
-
-    /* réduire la taille des images miniatures pour qu'elles s'adaptent aux petits écrans */
-    .thumbnails img {
-        width: 70px;
-        height: 70px;
+    /* élément qui contient l'ensemble de la galerie */
+    .gallery {
+        margin-top: 30px;
     }
 
-    /* ajuster la taille de l'image agrandie pour qu'elle s'adapte à la largeur de l'écran */
+    /* contient les vignettes (miniatures) de chaque image dans la galerie. */
+    .thumbnails {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    /* Cette classe est appliquée à l'image principal qui représente une vignette */
+    .thumbnails img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Cette classe est appliquée à l'élément img qui représente l'image agrandie */
     .preview img {
-        width: 100%;
-        height: auto;
+        width: 22em;
+        height: 20em;
+        margin-bottom: 1em;
     }
-}
 
-@media only screen and (max-width: 480px) {
-
-    /* réduire la taille des images miniatures pour qu'elles s'adaptent aux petits écrans */
-    .thumbnails img {
-        width: 30px;
-        height: 30px;
+    /* Titre de la section */
+    .h2_gallerie {
+        font-size: 1.2em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
     }
-}
+
+    /* Paragraphe principal */
+    .p_gallerie {
+        font-size: 1em;
+    }
 
 
-
-
-
-
-/* media queries pour la page d'accueil */
-
-
-@media screen and (max-width: 768px) {
-
+    /* media queries pour la page d'accueil */
     .section_article {
         flex-direction: column;
     }
@@ -1413,10 +1589,8 @@ p{
         font-size: 1.5em;
     }
 
-}
+    /* styles du footer pour les petits écrans */
 
-/* styles du footer pour les petits écrans */
-@media (max-width: 767px) {
     footer {
         padding: 10px 0;
     }
@@ -1450,11 +1624,9 @@ p{
     .resaux_sociaux {
         font-size: 1.5em;
     }
-}
 
-/* MEDIA QUERIES POUR LA PAGE D'EVENEMENTS */
+    /* MEDIA QUERIES POUR LA PAGE D'EVENEMENTS */
 
-@media (max-width: 767px) {
     .container_evenements {
         display: none;
     }
@@ -1476,18 +1648,7 @@ p{
     .h1_evenement {
         font-size: 32px;
     }
-}
 
-/* Pour les écrans dont la largeur est comprise entre 768px et 1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .container_evenements {
-        display: none;
-    }
-
-}
-
-/* MEDIA QUERIES POUR LE DEUXIEME SLIDER */
-@media (max-width: 1024px) {
     #slider {
         position: relative;
         max-width: 100%;
@@ -1529,11 +1690,8 @@ p{
         opacity: 1;
     }
 
-}
+    /* MEDIA QUERIES POUR LA PAGE RESERVATION */
 
-/* MEDIA QUERIES POUR LA PAGE RESERVATION */
-
-@media only screen and (max-width: 600px) {
     form {
         padding: 10px;
     }
@@ -1552,7 +1710,7 @@ p{
     }
 
     input[type="submit"] {
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
 
     .annuler_reservation {
@@ -1567,58 +1725,48 @@ p{
     .h1_reservation {
         font-size: 1.5em;
     }
-}
 
-/* media queries page a propos */
 
-/* Media query pour les petits écrans */
-@media (max-width: 500px) {
+
+
+    /* media queries page a propos */
+
     .membre-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-    
+
     .membre-image {
-      width: 100%;
-      order: -1; /* Placer l'image avant le texte */
+        width: 100%;
+        order: -1;
+        /* Placer l'image avant le texte */
     }
-    
+
     .membre-bio {
-      width: 100%;
-      text-align: center;
-      margin-top: 1em;
+        width: 100%;
+        text-align: center;
+        margin-top: 1em;
     }
-    
+
     .h1_membres {
-      font-size: 2em;
+        font-size: 2em;
     }
-    
-    .p_membres {
-      font-size: 1.5em;
-    }
-    
-    h2.align-top {
-      margin-bottom: 0.5em;
-    }
-    
-    .p_membre {
-      font-size: 1.2em;
-    }
-  }
-  
 
-  /* Media queries pour les écrans moyens */
-  @media (min-width: 500px) and (max-width: 900px) {
-    .membre-container {
-      flex-direction: column;
+    .p_membres {
+        font-size: 1.5em;
     }
-    
-    .membre-image {
-      width: 100%;
-      height: auto;
+
+    h2.align-top {
+        margin-bottom: 0.5em;
     }
-    
-    .membre-bio {
-      width: 100%;
+
+    .p_membre {
+        font-size: 1.2em;
     }
-  }
+
+
+    /* Media queries pour les écrans moyens */
+    .p_annuler_reservation {
+        font-size: 1em;
+    }
+}

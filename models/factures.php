@@ -57,6 +57,17 @@ class Factures extends Database {
     {
         return $this->code_moyendepaiement = $code_moyendepaiement;
     }
-
+    public function ajouterFacture()
+    {
+        $ajouterfacture = $this->pdo->prepare("INSERT INTO factures (code_factures,montant_factures,date_factures,code_clients,code_fournisseurs,code_moyendepaiement)
+      VALUES(?,?,?,?,?,?) ");
+        $ajouterfacture->bindValue(1, $this->code_factures, PDO::PARAM_INT);
+        $ajouterfacture->bindValue(2, $this->montant_factures, PDO::PARAM_INT);
+        $ajouterfacture->bindValue(3, $this->date_factures, PDO::PARAM_STR);
+        $ajouterfacture->bindValue(4, $this->code_clients, PDO::PARAM_INT);
+        $ajouterfacture->bindValue(5, $this->code_fournisseurs, PDO::PARAM_INT);
+        $ajouterfacture->bindValue(6, $this->code_moyendepaiement, PDO::PARAM_INT);
+        $ajouterfacture->execute();
+    }
 
 }

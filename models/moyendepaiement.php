@@ -1,6 +1,6 @@
 <?php 
 
-class Menus extends Database{
+class Moyendepaiement extends Database{
     private $code_moyendepaiement;
     private $nom_moyendepaiement;
 

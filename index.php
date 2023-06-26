@@ -9,6 +9,8 @@ include("models/roles.php");
 include("models/fournisseurs.php");
 include("models/livrer.php");
 include("models/produits.php");
+include("models/moyendepaiement.php");
+include("models/factures.php");
 ?>
 
 <!DOCTYPE html>

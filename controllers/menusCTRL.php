@@ -15,7 +15,7 @@ $dessertsList = $menu_desserts->menu_desserts();
 if (isset($_POST["delete"])) {
     $menu_desserts->setCode_menu(htmlspecialchars($_POST['delete']));
     $menu_desserts->supprimerMenu();
-    header("Location:index.php?menu_entrees");
+    header("Location:index.php?menu_desserts");
 }
 
 $menu_vins = new Menus();
@@ -24,7 +24,7 @@ $vinsList = $menu_vins->menu_vins();
 if (isset($_POST["delete"])) {
     $menu_vins->setCode_menu(htmlspecialchars($_POST['delete']));
     $menu_vins->supprimerMenu();
-    header("Location:index.php?menu_entrees");
+    header("Location:index.php?menu_vins");
 }
 
 $menu_plats = new Menus();
@@ -33,5 +33,5 @@ $platsList = $menu_plats->menu_plats();
 if (isset($_POST["delete"])) {
     $menu_plats->setCode_menu(htmlspecialchars($_POST['delete']));
     $menu_plats->supprimerMenu();
-    header("Location:index.php?menu_entrees");
+    header("Location:index.php?menu_plats");
 }

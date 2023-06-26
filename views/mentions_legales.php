@@ -1,52 +1,10 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head> -->
-<!-- <header>
-    <nav class="nav">
-        <div class="main-navlinks">
-            <button class="button" type="button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="navlinks-container">
-            <a href="">Accueil</a>
-            <a href="">Menu</a>
-            <a href="">Biographie</a>
-            <a href="">Evénements</a>
-            <a href="">Galerie</a>
-            <a href="">Newsletter</a>
-            <a href="">Contact</a>
-            <a href="">Horaires</a>
-        </div>
-        <div>
-            <img class="image" src="../img/aldenaire.jpg" alt="">
-        </div>
-        <div>
-            <a class="reservation" href="#">RESERVATION</a>
-        </div>
-
-    </nav> -->
 </header>
 <main>
     <section>
         <div class="main">
-            <!-- <img class="image2" src="views/assets/img/alto.jpg" alt="photo cathédrale"> -->
-            <h1 class="main_ml_h1" >Mentions légales et Conditions générales de vente</h1>
-            
+
+            <h1 class="main_ml_h1">Mentions légales et Conditions générales de vente</h1>
+
         </div>
     </section>
 
@@ -63,49 +21,42 @@
         <section>
             <div class="ml">
                 <h1>PROPRIETE</h1><br>
-                <p>Le site de restauration <strong>Nom du site</strong> est édité par <strong>Nom de
-                        l'entreprise</strong>,
-                    société <strong>Forme juridique de l'entreprise</strong> au capital de <strong>Montant du capital
-                        social</strong> euros, immatriculée au registre du commerce et des sociétés sous le numéro
-                    <strong>Numéro RCS</strong> et dont le siège social est situé à <strong>Adresse du siège
-                        social</strong>.
+                <p>Le site de restauration <strong>le Barrio Alto</strong> est édité par <strong>le Barrio Alto</strong>,
+                    société <strong>SARL</strong> au capital de <strong>1 000 000
+                    </strong> euros, immatriculée au registre du commerce et des sociétés sous le numéro
+                    <strong>RCS Beauvais 123 456 789</strong> et dont le siège social est situé à <strong>8 rue du beauvaisie
+                    </strong>.
                 </p>
-                <p>Le directeur de la publication du site est <strong>Nom du directeur de la publication</strong>, en
+                <p>Le directeur de la publication du site est <strong>Diogo Emmanuel</strong>, en
                     qualité de <strong>Fonction du directeur de la publication</strong>.</p>
-                <p>Le site est hébergé par <strong>Nom de l'hébergeur</strong>, société <strong>Forme juridique de
-                        l'hébergeur</strong> au capital de <strong>Montant du capital social</strong> euros,
+                <p>Le site est hébergé par <strong>Hostinger</strong>, société <strong>Société à responsabilité limitée (SARL)
+                        </strong> au capital de <strong>200000</strong> euros,
                     immatriculée au
-                    registre du commerce et des sociétés sous le numéro <strong>Numéro RCS</strong> et dont le siège
+                    registre du commerce et des sociétés sous le numéro <strong>RCS Beauvais 854 654 123</strong> et dont le siège
                     social
-                    est situé à <strong>Adresse du siège social</strong>.</p>
+                    est situé à <strong>10 ru de Paris a Beauvais</strong>.</p>
 
-                <!-- <h1>Conditions générales de vente</h1><br> -->
+              
                 <h2> Objet et champ d'application</h2>
                 <p>Les présentes conditions générales de vente s'appliquent à toutes les commandes passées sur le site
                     de
-                    restauration <strong>Nom du site</strong>.</p>
+                    restauration <strong>le Barrio Alto</strong>.</p>
 
                 <h2> Produits et services</h2>
                 <p>Le site de restauration propose des plats et des boissons à emporter ou en livraison.</p>
                 <p>Les produits et services proposés sur le site sont décrits avec la plus grande précision possible.
                 </p>
 
-                <h2> Commandes</h2>
-                <p>Les commandes sont passées en ligne sur le site de restauration.</p>
-                <p>Le paiement s'effectue en ligne par carte bancaire.</p>
+            
 
                 <h2> Prix</h2>
                 <p>Les prix des produits et services proposés sur le site sont indiqués en euros toutes taxes comprises
                     (TTC).</p>
 
-                <h2> Livraison</h2>
-                <p>La livraison est assurée par <strong>Nom du prestataire de livraison</strong>. Les délais de
-                    livraison
-                    sont indiqués sur le site de restauration et peuvent varier en fonction de la zone géographique.</p>
+                
 
                 <h2> Réclamations</h2>
-                <p>Toute réclamation doit être adressée par courrier électronique à l'adresse suivante : <a
-                        href="mailto:adresse@entreprise.com">adresse@entreprise.com</a>. Les réclamations seront
+                <p>Toute réclamation doit être adressée par courrier électronique à l'adresse suivante : <a href="mailto:adresse@entreprise.com">adresse@entreprise.com</a>. Les réclamations seront
                     traitées
                     dans les meilleurs délais.</p>
 
@@ -218,4 +169,4 @@
     </body>
     <script src="test.js"></script>
 
-</html>
+    </html>

@@ -142,6 +142,55 @@ if ($_SESSION['donnees'][0]["code_roles"] == 1) {
         <input class="input_admin_submit" type="submit" name="ajouterlivraison">
     </form>
     <hr>
+
+    
+    <h2 class="h2_ajouter_menu">Ajouter Facture</h2>
+    <form class="form_admin" method="POST" action="">
+
+        
+
+        <label class="label_admin" for="montant_factures">montant factures :</label>
+        <input class="input_admin" type="text" name="montant_factures" >
+        <?php if (isset($error["montant_factures"])) { ?>
+            <p><?= htmlspecialchars($error["montant_factures"]) ?></p>
+        <?php } ?>
+        <br>
+
+        <label class="label_admin" for="date_factures">Date de factures :</label>
+        <input class="input_admin" type="date" name="date_factures" >
+        <?php if (isset($error["date_factures"])) { ?>
+            <p><?= htmlspecialchars($error["date_factures"]) ?></p>
+        <?php } ?>
+        <br>
+
+        <label class="label_admin" for="code_clients">code client :</label>
+        <input class="input_admin" type="text" name="code_clients" >
+        <?php if (isset($error["code_clients"])) { ?>
+            <p><?= htmlspecialchars($error["code_clients"]) ?></p>
+        <?php } ?>
+        <br>
+
+        <label class="label_admin" for="code_fournisseurs">code fournisseur :</label>
+        <input class="input_admin" type="text" name="code_fournisseurs" >
+        <?php if (isset($error["code_fournisseurs"])) { ?>
+            <p><?= htmlspecialchars($error["code_fournisseurs"]) ?></p>
+        <?php } ?>
+        <br>
+
+        <label class="label_admin" for="code_moyendepaiement">code moyen de paiement :</label>
+        <input class="input_admin" type="text" name="code_moyendepaiement" >
+        <?php if (isset($error["code_moyendepaiement"])) { ?>
+            <p><?= htmlspecialchars($error["code_moyendepaiement"]) ?></p>
+        <?php } ?>
+        <br>
+
+        <input class="input_admin_submit" type="submit" name="ajouterfacture">
+    </form>
+    <hr>
+
+
+
+    
     <form id="deco" action="" method="post">
         <p><strong>Souhaitez-vous vous déconnecter?</strong>
             <input type="submit" name="deconnexion" value="Déconnexion" />
